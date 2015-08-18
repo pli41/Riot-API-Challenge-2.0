@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<script src="lib/angular/angular.js"></script>
+		<script src="lib/angular-animate/angular-animate.js"></script>
 		<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"/></script>
 		<script scr="lib/file-saver.js/FileSaver.js"></script>
 	</head>
 
-	<body ng-app="app">
+	<body>
 
+		<div ng-controller="buttonsCtrl">
+		    <h4>Checkbox</h4>
+		    <pre>Model: {{checkModel}}</pre>
+		    <pre>Results: {{checkResults}}</pre>
+		    <div class="btn-group">
+		        <label class="btn btn-primary" ng-model="checkModel.Assassin" btn-checkbox>Assassin</label>
+		        <label class="btn btn-primary" ng-model="checkModel.Marksman" btn-checkbox>Marksman</label>
+		        <label class="btn btn-primary" ng-model="checkModel.Fighter" btn-checkbox>Fighter</label>
+		        <label class="btn btn-primary" ng-model="checkModel.Mage" btn-checkbox>Mage</label>
+		        <label class="btn btn-primary" ng-model="checkModel.Support" btn-checkbox>Support</label>
+		        <label class="btn btn-primary" ng-model="checkModel.Tank" btn-checkbox>Tank</label>
+		    </div>
+		</div>
 
-		<div class="main" ng-controller="mainController">
-			<div class="container">
-				<div class="row" ng-repeat="champion in champions.data">
-					<div class="col-md-1">
-						<a href="">
-							<img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{ champion.image }}">
-						</a>
-						{{ champion.name }}		
+		<div ng-controller="mainController">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat="champion in champions.data">
+						<div>
+							<a href="#" class="thumbnail">
+								<img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{ champion.image }}" class="img-responsive">
+								<div class="championNames">{{ champion.name }}</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -31,6 +48,8 @@
 
 	    <!-- Controllers -->
 	    <script src="js/controllers/mainController.js"></script>
+	    <script src="js/controllers/buttonsCtrl.js"></script>
+
 
 	    <!-- Services -->
 	    <script src="js/services/champions.js"></script>
