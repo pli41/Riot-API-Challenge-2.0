@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "name": "Aatrox",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Aatrox.png"
+    },
+    {
+      "name": "Ahri",
+      "primary role": "Mage",
+      "secondary role": "Assassin",
+      "image": "Ahri.png"
+    },
+    {
+      "name": "Akali",
+      "primary role": "Assassin",
+      "secondary role": "",
+      "image": "Akali.png"
+    },
+    {
+      "name": "Alistar",
+      "primary role": "Tank",
+      "secondary role": "Suppport",
+      "image": "Alistar.png"
+    },
+    {
+      "name": "Amumu",
+      "primary role": "Tank",
+      "secondary role": "Mage",
+      "image": "Amumu.png"
+    },
+    {
+      "name": "Anivia",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Anivia.png"
+    },
+    {
+      "name": "Annie",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Annie.png"
+    },
+    {
+      "name": "Ashe",
+      "primary role": "Marksman",
+      "secondary role": "Support",
+      "image": "Ashe.png"
+    },
+    {
+      "name": "Azir",
+      "primary role": "Mage",
+      "secondary role": "Marksman",
+      "image": "Azir.png"
+    },
+    {
+      "name": "Blitzcrank",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Blitzcrank.png"
+    },
+    {
+      "name": "Brand",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Brand.png"
+    },
+    {
+      "name": "Braum",
+      "primary role": "Support",
+      "secondary role": "Tank",
+      "image": "Braum.png"
+    },
+    {
+      "name": "Caitlyn",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Caitlyn.png"
+    },
+    {
+      "name": "Cassiopeia",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Cassiopeia.png"
+    },
+    {
+      "name": "Chogath",
+      "primary role": "Tank",
+      "secondary role": "Mage",
+      "image": "Chogath.png"
+    },
+    {
+      "name": "Corki",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Corki.png"
+    },
+    {
+      "name": "Darius",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Darius.png"
+    },
+    {
+      "name": "Diana",
+      "primary role": "Fighter",
+      "secondary role": "Mage",
+      "image": "Diana.png"
+    },
+    {
+      "name": "Draven",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Draven.png"
+    },
+    {
+      "name": "DrMundo",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "DrMundo.png"
+    },
+    {
+      "name": "Elise",
+      "primary role": "Mage",
+      "secondary role": "Fighter",
+      "image": "Elise.png"
+    },
+    {
+      "name": "Evelynn",
+      "primary role": "Assassin",
+      "secondary role": "Mage",
+      "image": "Evelynn.png"
+    }
+  ]
+}
