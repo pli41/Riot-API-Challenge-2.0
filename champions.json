@@ -71,6 +71,66 @@
       "primary role": "Support",
       "secondary role": "Tank",
       "image": "Braum.png"
+    },
+    {
+      "name": "Caitlyn",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Caitlyn.png"
+    },
+    {
+      "name": "Cassiopeia",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Cassiopeia.png"
+    },
+    {
+      "name": "Chogath",
+      "primary role": "Tank",
+      "secondary role": "Mage",
+      "image": "Chogath.png"
+    },
+    {
+      "name": "Corki",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Corki.png"
+    },
+    {
+      "name": "Darius",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Darius.png"
+    },
+    {
+      "name": "Diana",
+      "primary role": "Fighter",
+      "secondary role": "Mage",
+      "image": "Diana.png"
+    },
+    {
+      "name": "Draven",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Draven.png"
+    },
+    {
+      "name": "DrMundo",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "DrMundo.png"
+    },
+    {
+      "name": "Elise",
+      "primary role": "Mage",
+      "secondary role": "Fighter",
+      "image": "Elise.png"
+    },
+    {
+      "name": "Evelynn",
+      "primary role": "Assassin",
+      "secondary role": "Mage",
+      "image": "Evelynn.png"
     }
   ]
 }
