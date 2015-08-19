@@ -1,4 +1,4 @@
-app.controller('buttonsCtrl', ['$scope', function ($scope) {
+app.controller('buttonsCtrl', ['$scope', function ($scope, shared) {
 
   $scope.checkModel = {
     Assassin: true,
