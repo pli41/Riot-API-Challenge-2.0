@@ -1,0 +1,43 @@
+var fs = require('fs');
+var matches = JSON.parse(fs.readFileSync('NA.json'));
+var champions = JSON.parse(fs.readFileSync('champions.json'));
+var championsOriginal = JSON.parse(fs.readFileSync('champion-original.json'));
+var builds = {};
+var count = 0;
+
+for(var i in champions.data){
+  var name = champions.data[i].name;
+  // console.log(championsOriginal.data[name].key);
+  builds[championsOriginal.data[name].key]={};
+}
+// console.log(builds);
+for(i in matches){
+  try {
+      var match = JSON.parse(fs.readFileSync(matches[i]+'.json'));
+
+  } catch (e) {
+    continue;
+   }
+    var t =0;
+    while(t < 10){
+      var champ = match.participants[t].championId;
+      for(var m=0; m <6; m++){
+      	if(builds[champ]!=undefined){
+	        if(builds[champ][match.participants[t].stats['item'+m]]!=undefined){
+	        	// console.log(match.participants[t].stats['item'+m]);
+	        	builds[champ][match.participants[t].stats['item'+m]] ++;
+	        	// console.log(builds[match][match.participants[t].stats['item'+m]]);
+	        }
+	        else{
+	        	builds[champ][match.participants[t].stats['item'+m]] = 1;
+	        	// console.log(match.participants[t].stats['item'+m]);
+	        }
+        }
+      }
+      t++;
+    }
+  }
+ 
+console.log(builds);
+
+fs.writeFileSync('champion_builds.json', JSON.stringify(builds));
