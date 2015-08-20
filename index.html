@@ -12,22 +12,17 @@
 	</head>
 
 	<body>
-
-		<div ng-controller="buttonsCtrl">
-		    <h4>Checkbox</h4>
-		    <pre>Model: {{checkModel}}</pre>
-		    <pre>Results: {{checkResults}}</pre>
-		    <div class="btn-group">
-		        <label class="btn btn-primary" ng-model="checkModel.Assassin" btn-checkbox>Assassin</label>
-		        <label class="btn btn-primary" ng-model="checkModel.Marksman" btn-checkbox>Marksman</label>
-		        <label class="btn btn-primary" ng-model="checkModel.Fighter" btn-checkbox>Fighter</label>
-		        <label class="btn btn-primary" ng-model="checkModel.Mage" btn-checkbox>Mage</label>
-		        <label class="btn btn-primary" ng-model="checkModel.Support" btn-checkbox>Support</label>
-		        <label class="btn btn-primary" ng-model="checkModel.Tank" btn-checkbox>Tank</label>
-		    </div>
-		</div>
-
 		<div ng-controller="mainController">
+			<div ng-controller="tabsCtrl">
+				<tabset>
+				    <tab heading="Static title">Static content</tab>
+				    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+				      {{tab.content}}
+				    </tab>
+		  		</tabset>
+		  	</div>
+
+		
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat="champion in champions.data">
@@ -48,12 +43,10 @@
 
 	    <!-- Controllers -->
 	    <script src="js/controllers/mainController.js"></script>
-	    <script src="js/controllers/buttonsCtrl.js"></script>
-
 
 	    <!-- Services -->
 	    <script src="js/services/champions.js"></script>
-
+	    <script src="js/services/shareData.js"></script>
 	    <!-- Directives -->
 		
 		
