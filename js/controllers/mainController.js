@@ -1,9 +1,3 @@
-app.controller('mainController', ['$scope', 'champions', 'shared', function($scope, champions, shared) {
-  champions.success(function(data) {
-    	$scope.champions = data;
-  });
-}]);
-
 app.controller('tabsCtrl', function ($scope, $window, shared, champions) {
    champions.success(function(data) {
      var champions = data.data;

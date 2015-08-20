@@ -9,33 +9,32 @@
 		<script src="lib/angular-animate/angular-animate.js"></script>
 		<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"/></script>
 		<script scr="lib/file-saver.js/FileSaver.js"></script>
+
 	</head>
 
 	<body>
-		<div ng-controller="mainController">
-			<div ng-controller="tabsCtrl">
-				<tabset>
-				    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
-				      <!--{{tab.content}}-->
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat="champion in tab.content">
-									<div>
-										<a href="#" class="thumbnail">
-											<img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{ champion.image }}" class="img-responsive">
-											<div class="championNames">{{ champion.name}}</div>
-										</a>
-									</div>
+		<div ng-controller="tabsCtrl">
+			<tabset>
+			    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+			      <!--{{tab.content}}-->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat="champion in tab.content">
+								<div>
+									<a href="#" class="thumbnail">
+										<img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{ champion.image }}" class="img-responsive">
+										<div class="championNames">{{ champion.name}}</div>
+									</a>
 								</div>
 							</div>
 						</div>
-				    </tab>
-		  		</tabset>
-		  	</div>
+					</div>
+			    </tab>
+	  		</tabset>
+	  	</div>
 
 		
 			
-		</div>
 		
 
 		<!-- Modules -->

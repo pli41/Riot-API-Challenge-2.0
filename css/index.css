@@ -4,5 +4,19 @@
 
 .thumbnail{
 	margin-bottom: 5px;
+}
 
+.col-lg-1{
+	padding-left:  0px;
+	padding-right: 0px;
+}
+
+.tab-content{
+	margin-left: 8%;
+	margin-right: 8%;
+
+}
+
+.nav{
+	padding-left: 8%;
 }
