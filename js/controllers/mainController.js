@@ -1,32 +1,48 @@
 app.controller('mainController', ['$scope', 'champions', 'shared', function($scope, champions, shared) {
   champions.success(function(data) {
     	$scope.champions = data;
-    	var champions = data.data;
-    	var assassins = [];
-    	var marksman = [];
-    	var fighter = [];
-    	var mage = [];
-    	var support = [];
-    	var tank = [];
-
-    	for (var i = champions.length - 1; i >= 0; i--) {
-    		//deal with primary role
-    		var primary = champions[i]['primary role'];
-    		var secondary = champions[i]['secondary role'];
-
-    	};
-        shared.setProperty('abc');
   });
 }]);
 
-app.controller('tabsCtrl', function ($scope, $window, shared) {
-  $scope.tabs = [
-    { title:'All', content: shared.getProperty() },
-    { title:'Assassins', content:'Dynamic content 1' },
-    { title:'Marksman', content:'Dynamic content 1' },
-    { title:'Fighter', content:'Dynamic content 1' },
-    { title:'Mage', content:'Dynamic content 1' },
-    { title:'Support', content:'Dynamic content 1' },
-    { title:'Tank', content:'Dynamic content 2', disabled: true }
-  ];
+app.controller('tabsCtrl', function ($scope, $window, shared, champions) {
+   champions.success(function(data) {
+     var champions = data.data;
+     console.log(champions);
+     var Assassins = [];
+     var Marksmans = [];
+     var Fighters = [];
+     var Mages = [];
+     var Supports = [];
+     var Tanks = [];
+     for(var i = 0; i < champions.length; i ++ ){
+       if(champions[i]['primary role'] == 'Assassin' || champions[i]['secondary role'] == 'Assassin'){
+         Assassins.push(champions[i]);
+       }
+       if(champions[i]['primary role'] == 'Marksman' || champions[i]['secondary role'] == 'Marksman'){
+         Marksmans.push(champions[i]);
+       }
+       if(champions[i]['primary role'] == 'Fighter' || champions[i]['secondary role'] == 'Fighter'){
+         Fighters.push(champions[i]);
+       }
+       if(champions[i]['primary role'] == 'Mage' || champions[i]['secondary role'] == 'Mage'){
+         Mages.push(champions[i]);
+       }
+       if(champions[i]['primary role'] == 'Tank' || champions[i]['secondary role'] == 'Tank'){
+         Tanks.push(champions[i]);
+       }
+        if(champions[i]['primary role'] == 'Support' || champions[i]['secondary role'] == 'Support'){
+         Supports.push(champions[i]);
+       }
+     }
+    	 $scope.tabs = [
+      { title:'All', content:champions },
+      { title:'Assassin', content:Assassins },
+      { title:'Marksman', content:Marksmans },
+      { title:'Fighter', content:Fighters},
+      { title:'Mage', content:Mages },
+      { title:'Support', content:Supports },
+      { title:'Tank', content:Tanks }
+    ];
+  });
+
 });
