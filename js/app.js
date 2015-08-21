@@ -1,20 +1,28 @@
-var app = angular.module('app', ['ngAnimate', 'ui.bootstrap', 'ngRoute']);
+var app = angular.module('app', ['ngAnimate', 'ui.bootstrap', 'ui.router']);
 
-app.config(function ($routeProvider) { 
-  $routeProvider 
-    .when('/', { 
-      controller: 'mainController', 
-      templateUrl: 'html/index.html' 
-    }) 
-    .otherwise({ 
-      redirectTo: '/' 
-    });
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+  $urlRouterProvider.otherwise('/');
   
-  $routeProvider
-  	.when('/champions/:id',{
-  		controller: 'championController',
-    	templateUrl: 'html/champion.html'
-  
-  	});
+  $stateProvider
+    .state('home', {
+      url:'',
+      views: {
+        "main":{
+          templateUrl: 'html/championList.html',
+          controller: 'tabsCtrl'
+        },
+      }
+    })
 
-});
+    .state('champion', {
+      parent: 'home',
+      url: '/champion',
+      templateUrl: 'html/champion.html',
+      controller: 'championCtrl'
+    })
+    
+}]);
+
+app.controller('championCtrl', ['$scope', function ($scope){
+
+}])

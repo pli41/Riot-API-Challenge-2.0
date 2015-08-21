@@ -2,38 +2,25 @@
 <html lang="en" ng-app="app">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>Shell</title>
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<script src="lib/angular/angular.js"></script>
-		<script src="lib/angular-route/angular-route.js"></script>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="lib/angular-animate/angular-animate.js"></script>
 		<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"/></script>
 		<script scr="lib/file-saver.js/FileSaver.js"></script>
-
 	</head>
 
 	<body>
-		<div ng-controller="tabsCtrl">
-			<tabset>
-			    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
-			      <!--{{tab.content}}-->
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat="champion in tab.content">
-								<div>
-									<a href="#" class="thumbnail">
-										<img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{ champion.image }}" class="img-responsive">
-										<div class="championNames">{{ champion.name}}</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-			    </tab>
-	  		</tabset>
-	  	</div>
 
+		<ul>
+			<li><a ui-sref="home">home</a></li>
+			<li><a ui-sref="champion">champ</a></li>
+		</ul>
+
+		<div ui-view="main"></div>
+		
 		
 			
 		
@@ -43,7 +30,7 @@
 
 	    <!-- Controllers -->
 	    <script src="js/controllers/mainController.js"></script>
-
+		
 	    <!-- Services -->
 	    <script src="js/services/champions.js"></script>
 	    <script src="js/services/shareData.js"></script>
