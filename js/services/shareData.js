@@ -1,13 +1,4 @@
-app.service('shared', function(){
-	var sharedData = {
-		data: ''
-	};
-	return {
-		getProperty: function(){
-			return sharedData;
-		},
-		setProperty:  function(value){
-			sharedData.data = value;
-		}
-	};
+app.service('shared', function shared(){
+	var shared = this;
+	shared.message = "Default";
 });

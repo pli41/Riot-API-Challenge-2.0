@@ -5,24 +5,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   
   $stateProvider
     .state('home', {
-      url:'',
-      views: {
-        "main":{
-          templateUrl: 'html/championList.html',
-          controller: 'tabsCtrl'
-        },
-      }
+      url:'/',
+      templateUrl: 'html/championList.html',
+      controller: 'tabsCtrl as championList'
     })
 
     .state('champion', {
-      parent: 'home',
       url: '/champion',
       templateUrl: 'html/champion.html',
       controller: 'championCtrl'
     })
-    
 }]);
 
-app.controller('championCtrl', ['$scope', function ($scope){
-
-}])

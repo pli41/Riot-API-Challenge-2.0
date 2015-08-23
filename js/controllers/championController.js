@@ -1,3 +1,3 @@
-app.controller('championController', ['$scope', '$routeParams', function($scope, $routeParams) {
- 
-}]);
+app.controller('championCtrl', function ($scope, shared) {
+  $scope.championSelected = shared.message;
+});
