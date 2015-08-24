@@ -6,14 +6,24 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   $stateProvider
     .state('home', {
       url:'/',
-      templateUrl: 'html/championList.html',
-      controller: 'tabsCtrl as championList'
+      views:{
+        'champion':{
+          templateUrl: 'html/championList.html',
+          controller: 'tabsCtrl as championList'
+        }
+      }
+      
     })
 
     .state('champion', {
       url: '/champion',
-      templateUrl: 'html/champion.html',
-      controller: 'championCtrl'
+      views:{
+        'champion':{
+          templateUrl: 'html/champion.html',
+          controller: 'championCtrl as champion'
+        }
+      }
+      
     })
 }]);
 

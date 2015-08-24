@@ -1,4 +1,4 @@
-app.controller('tabsCtrl', ['$scope', 'mySharedService', 'champions', 'shareTest', function ($scope, mySharedService, champions, shareTest) {
+app.controller('tabsCtrl', ['$scope', 'champions', 'shareTest', function ($scope, champions, shareTest) {
    champions.success(function(data) {
      var champions = data.data;
      var Assassins = [];
@@ -40,39 +40,18 @@ app.controller('tabsCtrl', ['$scope', 'mySharedService', 'champions', 'shareTest
   $scope.handleClick = function(msg){
     $scope.shareTest = shareTest;
     $scope.shareTest.message = msg;
-    mySharedService.prepForBroadcast(msg);
   }
 }]);
 
 
-app.controller('championCtrl', ['$scope', 'sharedService', 'shareTest', function ($scope, sharedService, shareTest) {
-  $scope.$on('handleBroadcast', function(){
-    console.log('received')
-    $scope.message = mySharedService.message;
-  });
-
-  $scope.shareTest = shareTest;
-  $scope.message = $scope.shareTest.message;
-  console.log('111');
+app.controller('championCtrl', ['$scope', 'shareTest', function ($scope, shareTest) {
+  $scope.message = '';
+  $scope.message = shareTest.message;
+  $scope.abc = '123';
   console.log($scope.message);
+  console.log($scope.abc);
 }]);
 
 app.factory('shareTest', function(){
   return {};
-});
-
-app.factory('mySharedService', function($rootScope) {
-    var sharedService = {};
-    sharedService.message = '';
-    sharedService.prepForBroadcast = function(msg) {
-        console.log('preping');
-        this.message = msg;
-        this.broadcastItem();
-    };
-
-    sharedService.broadcastItem = function() {
-        $rootScope.$broadcast('handleBroadcast');
-        console.log('broadcasted');
-    };
-    return sharedService;
 });
