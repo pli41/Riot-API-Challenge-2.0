@@ -48,23 +48,25 @@ app.controller('championCtrl', ['$scope', 'shareTest', function ($scope, shareTe
   $scope.message = '';
   $scope.message = shareTest.message;
   $scope.abc = '123';
-  console.log($scope.message);
-  console.log($scope.abc);
 }]);
 
 app.factory('shareTest', function(){
   return {};
 });
 
-app.controller('oneCtrl', function($scope, $timeout) {
- $scope.list1 = [];
-  
-  $scope.list5 = [
-    { 'title': '1001', 'drag': true },
-    { 'title': '1004', 'drag': true },
-    { 'title': '1006', 'drag': true }, 
-    { 'title': '1011', 'drag': true }, 
-    { 'title': '1018', 'drag': true },
-    { 'title': '1026', 'drag': true },
-  ];
-});
+app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
+  // $scope.champion = shareTest.message;
+  // console.log($scope.champion + "test:");
+   championbuilds.success(function(data) {
+      var buildsdata =  data['1']['data'];
+      // console.log(buildsdata);
+      $scope.list1 = [];
+      
+      $scope.list3 = [
+      ];
+      for(var build in buildsdata){
+        $scope.list3.push(build);
+      }
+      $scope.list2 = $scope.list3;
+   });
+}]);

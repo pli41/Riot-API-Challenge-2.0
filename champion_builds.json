@@ -59,7 +59,7 @@
     }
   },
   "4": {
-    "name": "Twisted Fate",
+    "name": "TwistedFate",
     "count": 1525,
     "data": {
       "1026": 15,
@@ -79,7 +79,7 @@
     }
   },
   "5": {
-    "name": "Xin Zhao",
+    "name": "XinZhao",
     "count": 980,
     "data": {
       "1329": 13,
@@ -200,7 +200,7 @@
     }
   },
   "11": {
-    "name": "Master Yi",
+    "name": "MasterYi",
     "count": 1975,
     "data": {
       "1037": 12,
@@ -405,7 +405,7 @@
     }
   },
   "21": {
-    "name": "Miss Fortune",
+    "name": "MissFortune",
     "count": 1897,
     "data": {
       "1037": 12,
@@ -670,7 +670,7 @@
     }
   },
   "36": {
-    "name": "Dr. Mundo",
+    "name": "DrMundo",
     "count": 227,
     "data": {
       "1011": 18,
@@ -1042,7 +1042,7 @@
     }
   },
   "59": {
-    "name": "Jarvan IV",
+    "name": "JarvanIV",
     "count": 451,
     "data": {
       "1028": 10,
@@ -1150,7 +1150,7 @@
     }
   },
   "64": {
-    "name": "Lee Sin",
+    "name": "LeeSin",
     "count": 1467,
     "data": {
       "1036": 11,
