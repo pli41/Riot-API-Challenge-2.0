@@ -9,8 +9,11 @@ for(var i in champions.data){
   var name = champions.data[i].name;
   // console.log(championsOriginal.data[name].key);
   builds[championsOriginal.data[name].key]={};
+  builds[championsOriginal.data[name].key]["name"]= championsOriginal.data[name].name;
+  builds[championsOriginal.data[name].key]["count"]= 0;
+  builds[championsOriginal.data[name].key]["data"]= {};
+
 }
-// console.log(builds);
 for(i in matches){
   try {
       var match = JSON.parse(fs.readFileSync(matches[i]+'.json'));
@@ -21,23 +24,33 @@ for(i in matches){
     var t =0;
     while(t < 10){
       var champ = match.participants[t].championId;
-      for(var m=0; m <6; m++){
-      	if(builds[champ]!=undefined){
-	        if(builds[champ][match.participants[t].stats['item'+m]]!=undefined){
-	        	// console.log(match.participants[t].stats['item'+m]);
-	        	builds[champ][match.participants[t].stats['item'+m]] ++;
-	        	// console.log(builds[match][match.participants[t].stats['item'+m]]);
-	        }
-	        else{
-	        	builds[champ][match.participants[t].stats['item'+m]] = 1;
-	        	// console.log(match.participants[t].stats['item'+m]);
-	        }
-        }
+      if(builds[champ]!=undefined){
+        builds[champ]["count"]++;
+        for(var m=0; m <6; m++){
+        	
+  	        if(builds[champ]["data"][match.participants[t].stats['item'+m]]!=undefined){
+  	        	// console.log(match.participants[t].stats['item'+m]);
+  	        	builds[champ]["data"][match.participants[t].stats['item'+m]] ++;
+  	        }
+  	        else{
+  	        	builds[champ]["data"][match.participants[t].stats['item'+m]] = 1;
+              
+  	        }
+          }
       }
       t++;
     }
   }
- 
-console.log(builds);
+
+for(var i in builds){
+  for(var t in builds[i]["data"]){
+    builds[i]["data"][t] =Math.floor((builds[i]["data"][t]/builds[i]["count"]) * 100);
+    if( builds[i]["data"][t] < 10){
+      delete  builds[i]["data"][t];
+    }
+
+  }
+  delete  builds[i]["data"]["0"];
+}
 
 fs.writeFileSync('champion_builds.json', JSON.stringify(builds));
