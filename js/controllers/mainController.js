@@ -55,3 +55,16 @@ app.controller('championCtrl', ['$scope', 'shareTest', function ($scope, shareTe
 app.factory('shareTest', function(){
   return {};
 });
+
+app.controller('oneCtrl', function($scope, $timeout) {
+ $scope.list1 = [];
+  
+  $scope.list5 = [
+    { 'title': '1001', 'drag': true },
+    { 'title': '1004', 'drag': true },
+    { 'title': '1006', 'drag': true }, 
+    { 'title': '1011', 'drag': true }, 
+    { 'title': '1018', 'drag': true },
+     { 'title': '1026', 'drag': true },
+  ];
+});
