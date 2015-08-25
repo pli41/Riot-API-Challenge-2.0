@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngAnimate', 'ui.bootstrap', 'ui.router','ngDragDrop']);
+var app = angular.module('app', ['ngAnimate','ui.bootstrap','ui.router','ngDragDrop']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
@@ -21,6 +21,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         'champion':{
           templateUrl: 'html/champion.html',
           controller: 'championCtrl as champion'
+        },
+
+        'itemList':{
+          templateUrl: 'html/itemList.html',
+          controller: 'oneCtrl as itemList'
         }
       }
       

@@ -65,6 +65,6 @@ app.controller('oneCtrl', function($scope, $timeout) {
     { 'title': '1006', 'drag': true }, 
     { 'title': '1011', 'drag': true }, 
     { 'title': '1018', 'drag': true },
-     { 'title': '1026', 'drag': true },
+    { 'title': '1026', 'drag': true },
   ];
 });
