@@ -10,8 +10,8 @@
           <li class="span10" style='margin-left:10px;'>
           <div class="thumbnail" data-drop="true" ng-model='list1' data-jqyoui-options="optionsList1" jqyoui-droppable="{multiple:true}">
             <div class="caption">
-              <div class="btn btn-info btn-draggable" ng-repeat="item in list1" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list1" jqyoui-draggable="{index: {{$index}},animate:true}">
-                <img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/{{item.title}}.png" class="img-responsive">
+              <div class="btn btn-info btn-draggable" ng-repeat="item in list1" ng-show="item" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list1" jqyoui-draggable="{index: {{$index}},animate:true}">
+                <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
               </div>
             </div>
           </div>
@@ -22,10 +22,10 @@
       
   <div class="navbar-inner">
     <div class="container form-inline" style="text-align: center;">
-      <div class="btn btn-droppable" ng-repeat="item in list5" data-drop="true" ng-model='list5' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list5])'}"  jqyoui-droppable="{index: {{$index}}}">
-        <div class="btn btn-info btn-draggable" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}" ng-hide="!item.title">
-          <img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/{{item.title}}.png" class="img-responsive">
-          {{item.title}}
+      <div class="btn btn-droppable" ng-repeat="item in list2" data-drop="true" ng-model='list2' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list2])'}"  jqyoui-droppable="{index: {{$index}}}">
+        <div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}" ng-hide="!item">
+          <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+          {{item}}
         </div>
       </div>
     </div>
