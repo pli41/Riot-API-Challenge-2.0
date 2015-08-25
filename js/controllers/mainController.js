@@ -62,11 +62,11 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
       // console.log(buildsdata);
       $scope.list1 = [];
       
-      $scope.list3 = [
+      $scope.list2 = [
       ];
       for(var build in buildsdata){
-        $scope.list3.push(build);
+        $scope.list2.push(build);
       }
-      $scope.list2 = $scope.list3;
+      
    });
 }]);
