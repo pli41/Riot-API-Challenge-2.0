@@ -1,5 +1,6 @@
 .championNames{
 	text-align: center;
+
 }
 
 .thumbnail{
@@ -27,10 +28,6 @@
 	padding-bottom: 19px;
 }
 
-.nav-tabs.nav-justified > li{
-	
-}
-
 .background {
     position: fixed;
     width: 100%;
@@ -52,4 +49,22 @@
 
 .thumbnail{
 	background-color: transparent;
+	border: 1px solid #76c8d0;
+}
+#
+.champName:hover{
+	border: 1px solid #FFF;
+}
+
+a{
+	color: #FFF;
+}
+
+.nav-tabs.nav-justified > li > a {
+    /* border-bottom: 1px solid #ddd; */
+    height:100%;
+	border-bottom: 0px;
+}
+a:hover{
+	color: orange;
 }

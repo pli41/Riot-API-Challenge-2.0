@@ -1,9 +1,9 @@
 var fs = require('fs');
 var https = require('https');
 var apikey = "79cfb0e6-89a2-4a0b-95c0-77238c9c6afe";
-var games = JSON.parse(fs.readFileSync('NA.json'));
-var path = "rankedGameData/";
-var mark = 12263;
+var games = JSON.parse(fs.readFileSync('NAranked.json'));
+var path = "NA_Ranked_data/";
+var mark = 0;
 var f = function(i) {
   mark = i;
   https.request({

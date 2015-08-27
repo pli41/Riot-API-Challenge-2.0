@@ -6,7 +6,7 @@
 				<div class="row">
 					<div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat="champion in tab.content">
 						<div>
-							<a ui-sref="champion" class="thumbnail" ng-click="handleClick(champion.name)">
+							<a ui-sref="champion" class="thumbnail champName" ng-click="handleClick(champion.name)">
 								<img src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{ champion.image}}" class="img-responsive">
 								<div class="championNames">
 									{{ champion.name }}
