@@ -68,5 +68,42 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
         $scope.list2.push(build);
       }
       
+   
+    
+      
    });
-}]);
+}])
+
+app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
+     
+      $scope.list3 = {
+        "title": "Page Title",
+        "type": "custom",
+        "map": "SR",
+        "mode": "CLASSIC",
+        "priority": false,
+        "sortrank": 0,
+        "blocks": [
+             {
+              "type": "name",
+              "recMath": false,
+              "minSummonerLevel": -1,
+              "maxSummonerLevel": -1,
+              "showIfSummonerSpell": "",
+              "hideIfSummonerSpell": "",
+              "items": [
+              ]
+          }
+        ]
+     }
+     $scope.list3["title"] = "Change name here";
+     $scope.done = function(){
+       for(var i in $scope.list1){
+          var item = {};
+          item["id"] = $scope.list1[i];
+          item["count"] = 1;
+          $scope.list3["blocks"][0]["items"].push(item);
+      }
+     }
+      
+  }]);
