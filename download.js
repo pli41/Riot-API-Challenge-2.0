@@ -1,8 +1,9 @@
 var fs = require('fs');
 var https = require('https');
-var apikey = ;
+var apikey = "79cfb0e6-89a2-4a0b-95c0-77238c9c6afe";
 var games = JSON.parse(fs.readFileSync('NA.json'));
-var mark = 0;
+var path = "rankedGameData/";
+var mark = 5165;
 var f = function(i) {
   mark = i;
   https.request({
@@ -20,7 +21,7 @@ var f = function(i) {
       } catch (e) {
         return ;
       }
-      fs.writeFileSync(games[i] + '.json', matchdatastr);
+      fs.writeFileSync(path + games[i] + '.json', matchdatastr);
     });
     
   }).on('error', function(e){

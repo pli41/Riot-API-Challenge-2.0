@@ -47,7 +47,7 @@ app.controller('tabsCtrl', ['$scope', 'champions', 'shareTest', function ($scope
 app.controller('championCtrl', ['$scope', 'shareTest', function ($scope, shareTest) {
   $scope.message = '';
   $scope.message = shareTest.message;
-  $scope.abc = '123';
+  
 }]);
 
 app.factory('shareTest', function(){

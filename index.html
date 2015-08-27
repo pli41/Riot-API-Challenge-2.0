@@ -6,26 +6,37 @@
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 		<script src="lib/angular/angular.min.js"></script>
-    <script src="lib/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+        <script src="lib/angular-dragdrop/src/angular-dragdrop.min.js"></script>
 		<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="lib/angular-animate/angular-animate.js"></script>
 		<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"/></script>
 		<script scr="lib/file-saver.js/FileSaver.js"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css" rel="stylesheet">
-    
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<script>
+			$('#BGVideo').on('ended', function () {
+  				this.load();
+  				this.play();
+			});
+		</script>
 	</head>
 
 	<body>
+<<<<<<< HEAD
+        <div class="background">
+          <video id="BGVideo" src="backgroundVideo.mp4" autoplay loop="true"></video>
+        </div>		
+=======
     <div class="background">
       <!--<video src="testBG.mp4" autoplay loop></video>-->
     </div>		
+>>>>>>> origin/master
 		<div ui-view="champion"></div>	
-    <div ui-view="itemList"></div>
-
-		<!-- Modules -->
+        <div ui-view="itemList"></div>
+		
+        <!-- Modules -->
 	    <script src="js/app.js"></script>
 
 	    <!-- Controllers -->
