@@ -85,7 +85,7 @@
       "image": "Cassiopeia.png"
     },
     {
-      "name": "Chogath",
+      "name": "Cho'Gath",
       "primary role": "Tank",
       "secondary role": "Mage",
       "image": "Chogath.png"
@@ -289,7 +289,7 @@
       "image": "Kennen.png"
     },
     {
-      "name": "Khazix",
+      "name": "Kha'Zix",
       "primary role": "Assassin",
       "secondary role": "Fighter",
       "image": "Khazix.png"
@@ -457,7 +457,7 @@
       "image": "Rammus.png"
     },
     {
-      "name": "RekSai",
+      "name": "Rek'Sai",
       "primary role": "Fighter",
       "secondary role": "",
       "image": "RekSai.png"
@@ -607,7 +607,7 @@
       "image": "Tryndamere.png"
     },
     {
-      "name": "TwistedFate",
+      "name": "Twisted Fate",
       "primary role": "Mage",
       "secondary role": "",
       "image": "TwistedFate.png"
@@ -649,7 +649,7 @@
       "image": "Veigar.png"
     },
     {
-      "name": "Velkoz",
+      "name": "Vel'Koz",
       "primary role": "Mage",
       "secondary role": "",
       "image": "Velkoz.png"

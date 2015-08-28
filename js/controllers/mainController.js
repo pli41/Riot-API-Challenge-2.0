@@ -55,28 +55,34 @@ app.factory('shareTest', function(){
 });
 
 app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
-  // $scope.champion = shareTest.message;
-  // console.log($scope.champion + "test:");
+  $scope.champion = shareTest.message;
+  console.log ("champion:" + $scope.champion);
    championbuilds.success(function(data) {
-      var buildsdata =  data['1']['data'];
-      // console.log(buildsdata);
-      $scope.list1 = [];
-      
-      $scope.list2 = [
-      ];
-      for(var build in buildsdata){
-        $scope.list2.push(build);
-      }
-      
+     for(var i in data){
+       if($scope.champion == data[i]['name']){
+         console.log("did find leblanc");
+          var buildsdata =  data[i]['data'];
+          $scope.list2 = [];
+          $scope.list3 = [];
+          $scope.list4 = [];
+          $scope.list5 = [];
+          $scope.list6 = [];
+          
+          $scope.list1 = [
+          ];
+          for(var build in buildsdata){
+            $scope.list1.push(build);
+          }
+       }
+     }
+     console.log($scope.list1);
    
-    
-      
    });
 }])
 
 app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
      $scope.done = function(){
-        $scope.list3 = {
+        $scope.listDone = {
         "title": "Page Title",
         "type": "custom",
         "map": "SR",
@@ -84,7 +90,16 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
         "priority": false,
         "sortrank": 0,
         "blocks": [
-             {
+            
+        ]
+     }
+     var count = 1;
+     $scope.addblock = function(){
+       //add block here
+       
+       count ++;
+     }
+     var buildTemplate =  {
               "type": "name",
               "recMath": false,
               "minSummonerLevel": -1,
@@ -93,19 +108,48 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
               "hideIfSummonerSpell": "",
               "items": [
               ]
-          }
-        ]
+      };  
+     $scope.listDone["title"] = "Change name here";
+     for(var i =0;i<count;i++){
+       $scope.listDone['blocks'].push(buildTemplate);
      }
-     $scope.list3["title"] = "Change name here";
-       for(var i in $scope.list1){
+     
+       for(var i in $scope.list2){
           var item = {};
-          item["id"] = $scope.list1[i];
+          item["id"] = $scope.list2[i];
           item["count"] = 1;
-          $scope.list3["blocks"][0]["items"].push(item);
+          $scope.listDone["blocks"][0]["items"].push(item);
       }
-      var json = JSON.stringify($scope.list3);
+       for(var i in $scope.list3){
+          var item = {};
+          item["id"] = $scope.list2[i];
+          item["count"] = 1;
+          $scope.listDone["blocks"][1]["items"].push(item);
+      }
+       for(var i in $scope.list4){
+          var item = {};
+          item["id"] = $scope.list2[i];
+          item["count"] = 1;
+          $scope.listDone["blocks"][2]["items"].push(item);
+      }
+       for(var i in $scope.list5){
+          var item = {};
+          item["id"] = $scope.list2[i];
+          item["count"] = 1;
+          $scope.listDone["blocks"][3]["items"].push(item);
+      }
+      for(var i in $scope.list6){
+          var item = {};
+          item["id"] = $scope.list2[i];
+          item["count"] = 1;
+          $scope.listDone["blocks"][4]["items"].push(item);
+      }
+      
+      
+      var json = JSON.stringify($scope.listDone);
       var blob = new Blob([json], {type: "application/json"});
-      saveAs(blob, "AnnieTemp.json");
+      var name = $scope.champion + "temp.json";
+      saveAs(blob, name);
      }
    
   }]);
