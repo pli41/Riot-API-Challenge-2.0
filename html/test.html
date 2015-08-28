@@ -1,0 +1,71 @@
+<style>
+  #products { float:left; width: 100%; margin-right: 2em; }
+  .panel {
+    
+  }
+  .accordion{
+    float: left;
+    width: 40%;
+    height: 90%;
+    padding-left: 5%;
+    padding-top: 5%;
+    margin: 0 0 0 0;
+  }
+  
+  #cart{
+    float: right;
+  }
+  
+  #itemBuilder{
+    margin:auto;
+  }
+
+</style>
+
+<div id="itemBuilder">
+  <div class="accordion" ng-controller="AccordionDemoCtrl">
+    <accordion close-others="oneAtATime">
+      <accordion-group is-open="status.isFirstOpen">
+        <accordion-heading>
+          Most commonly used items        
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isFirstOpen, 'glyphicon-chevron-right': !status.isFirstOpen}"></i>
+        </accordion-heading>
+        <div id="products" ng-controller="oneCtrl">
+          <div id="catalog">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat='item in list1'>
+                  <div ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+                    <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </accordion-group>
+      
+      <accordion-group is-open="status.isOpen">
+        <accordion-heading>
+          All items
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isOpen, 'glyphicon-chevron-right': !status.isOpen}"></i>
+        </accordion-heading>
+      </accordion-group>
+  </div>
+  
+  <div id="cart">
+    <h1 class="ui-widget-header">Item Sets</h1>
+    <div class="ui-widget-content">
+        <ol data-drop="true" ng-model='list2' jqyoui-droppable="{multiple:true}">
+            <li ng-repeat="item in list2 track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list2" jqyoui-draggable="{index: {{$index}},animate:true}">
+              <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+            </li>
+            
+        </ol>
+    </div>
+  </div>
+  <div ng-controller = "jsonCtrl">
+        <button ng-click="done()">Generate JSON</button>
+  </div>
+
+</div>
