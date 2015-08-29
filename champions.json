@@ -115,7 +115,7 @@
       "image": "Draven.png"
     },
     {
-      "name": "DrMundo",
+      "name": "Dr Mundo",
       "primary role": "Fighter",
       "secondary role": "Tank",
       "image": "DrMundo.png"
@@ -139,7 +139,7 @@
       "image": "Ezreal.png"
     },
     {
-      "name": "FiddleSticks",
+      "name": "Fiddle Sticks",
       "primary role": "Mage",
       "secondary role": "Support",
       "image": "FiddleSticks.png"
@@ -217,7 +217,7 @@
       "image": "Janna.png"
     },
     {
-      "name": "JarvanIV",
+      "name": "Jarvan IV",
       "primary role": "Tank",
       "secondary role": "Fighter",
       "image": "JarvanIV.png"
@@ -295,19 +295,19 @@
       "image": "Khazix.png"
     },
     {
-      "name": "KogMaw",
+      "name": "Kog'Maw",
       "primary role": "Marksman",
       "secondary role": "Mage",
       "image": "KogMaw.png"
     },
     {
-      "name": "Leblanc",
+      "name": "LeBlanc",
       "primary role": "Assassin",
       "secondary role": "Mage",
       "image": "Leblanc.png"
     },
     {
-      "name": "LeeSin",
+      "name": "Lee Sin",
       "primary role": "Fighter",
       "secondary role": "Assassin",
       "image": "LeeSin.png"
@@ -361,13 +361,13 @@
       "image": "Maokai.png"
     },
     {
-      "name": "MasterYi",
+      "name": "Master Yi",
       "primary role": "Assassin",
       "secondary role": "Fighter",
       "image": "MasterYi.png"
     },
     {
-      "name": "MissFortune",
+      "name": "Miss Fortune",
       "primary role": "Marksman",
       "secondary role": "",
       "image": "MissFortune.png"
