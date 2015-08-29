@@ -175,12 +175,31 @@ app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
         $scope.checkResults = [];
         angular.forEach($scope.checkModel, function (value, key) {
           if (value) {
-            $scope.checkResults=data[key];
+            $scope.checkResults.push(key);
           }
         });
+        for(var i in $scope.checkResults){
+          $scope.checkResults[i] = data[$scope.checkResults[i]];
+          console.log("checkResults:"+$scope.checkResults[i]);
+        }
+        
+        $scope.showResults = $scope.checkResults[0];
+        
+        for(var m=1; m < $scope.checkResults.length; m++){
+           $scope.showResultsTemp = [];
+          for(var n in $scope.checkResults[m]){
+            for(var i in $scope.showResults){
+              if($scope.showResults[i] == $scope.checkResults[m][n]){
+                 $scope.showResultsTemp.push($scope.showResults[i]);
+              }
+            }
+          }
+          $scope.showResults = $scope.showResultsTemp;
+         
+        }
+        console.log("showResults:"+$scope.showResults);
      });
-   });
-  
+   }); 
 }]);
 
   
