@@ -24,8 +24,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         },
 
         'itemList':{
-          //templateUrl: 'html/itemList.html',
-          //controller: 'oneCtrl as itemList'
+          // templateUrl: 'html/itemList.html',
+          // controller: 'oneCtrl as itemList'
           templateUrl: 'html/test.html',
           controller: 'oneCtrl as test'
 
