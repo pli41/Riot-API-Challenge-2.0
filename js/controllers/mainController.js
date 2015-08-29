@@ -148,40 +148,61 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
    
   }])
   
-app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
+app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items, $window) {
    items.success(function(data) {
         $scope.checkModel = {
-          Consumable: false,
-          GoldIncome: false,
-          Vision: false,
-          Armor:false,
-          Health:false,
-          HealthRegen:false,
-          MagicResist:false,
-          AttackSpeed:false,
-          CriticalStrike:false,
-          Damage:false,
-          LifeSteal:false,
-          CDReduction:false,
-          Mana:false,
-          ManaRegen:false,
-          AbilityPower:false,
-          Boots:false
+        Consumable: false,
+        GoldIncome: false,
+        Vision: false,
+        Armor:false,
+        Health:false,
+        HealthRegen:false,
+        MagicResist:false,
+        AttackSpeed:false,
+        CriticalStrike:false,
+        Damage:false,
+        LifeSteal:false,
+        CDReduction:false,
+        Mana:false,
+        ManaRegen:false,
+        AbilityPower:false,
+        Boots:false,
+        NonbootsMovement:false
       };
     
       $scope.checkResults = [];
     
       $scope.$watchCollection('checkModel', function () {
         $scope.checkResults = [];
-        $scope.checked = [];
         angular.forEach($scope.checkModel, function (value, key) {
           if (value) {
-            $scope.checkResults=data[key];
+            $scope.checkResults.push(key);
           }
         });
+        for(var i in $scope.checkResults){
+          $scope.checkResults[i] = data[$scope.checkResults[i]];
+          console.log("checkResults:"+$scope.checkResults[i]);
+        }
+        
+        $scope.showResults = $scope.checkResults[0];
+        
+        for(var m=1; m < $scope.checkResults.length; m++){
+           $scope.showResultsTemp = [];
+          for(var n in $scope.checkResults[m]){
+            for(var i in $scope.showResults){
+              if($scope.showResults[i] == $scope.checkResults[m][n]){
+                 $scope.showResultsTemp.push($scope.showResults[i]);
+              }
+            }
+          }
+          $scope.showResults = $scope.showResultsTemp;
+         
+        }
+        console.log("showResults:"+$scope.showResults);
      });
-   });
-  
+     //tabs
+       $scope.startingTabs = [{'title':'Jungle','content': data['Jungle']},{'title':'Lane','content':data['Lane']}];
+   }); 
 }]);
 
   
@@ -197,7 +218,7 @@ app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
       content: 'Dynamic Group Body - 2'
     }
   ];
-  
+
   $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
   $scope.addItem = function() {
