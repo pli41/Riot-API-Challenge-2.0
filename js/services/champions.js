@@ -17,3 +17,14 @@ app.factory('championbuilds', ['$http', function($http) {
               return err; 
             }); 
 }]);
+
+app.factory('items', ['$http', function($http) { 
+  return $http.get('itemCategory.json') 
+            .success(function(data) { 
+              return data;
+            }) 
+            .error(function(err) { 
+              return err; 
+            }); 
+}]);
+

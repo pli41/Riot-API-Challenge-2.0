@@ -21,4 +21,4 @@ for(i in items["data"]){
   }
   }
 console.log(itemlists);
-fs.writeFileSync('itemCatagory.json', JSON.stringify(itemlists));
+fs.writeFileSync('itemCategory.json', JSON.stringify(itemlists));

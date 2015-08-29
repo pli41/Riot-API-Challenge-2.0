@@ -56,11 +56,9 @@ app.factory('shareTest', function(){
 
 app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
   $scope.champion = shareTest.message;
-  console.log ("champion:" + $scope.champion);
    championbuilds.success(function(data) {
      for(var i in data){
        if($scope.champion == data[i]['name']){
-         console.log("did find leblanc");
           var buildsdata =  data[i]['data'];
           $scope.list2 = [];
           $scope.list3 = [];
@@ -75,8 +73,6 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
           }
        }
      }
-     console.log($scope.list1);
-   
    });
 }])
 
@@ -85,8 +81,8 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
         $scope.listDone = {
         "title": "Page Title",
         "type": "custom",
-        "map": "SR",
-        "mode": "CLASSIC",
+        "map": "any",
+        "mode": "any",
         "priority": false,
         "sortrank": 0,
         "blocks": [
@@ -150,7 +146,44 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
       saveAs(blob, name);
      }
    
-  }]);
+  }])
+  
+app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
+   items.success(function(data) {
+        $scope.checkModel = {
+        Consumable: false,
+        GoldIncome: false,
+        Vision: false,
+        Armor:false,
+        Health:false,
+        HealthRegen:false,
+        MagicResist:false,
+        AttackSpeed:false,
+        CriticalStrike:false,
+        Damage:false,
+        LifeSteal:false,
+        CDReduction:false,
+        Mana:false,
+        ManaRegen:false,
+        AbilityPower:false,
+        Boots:false
+      };
+    
+      $scope.checkResults = [];
+    
+      $scope.$watchCollection('checkModel', function () {
+        $scope.checkResults = [];
+        angular.forEach($scope.checkModel, function (value, key) {
+          if (value) {
+            $scope.checkResults=data[key];
+          }
+        });
+     });
+   });
+  
+}]);
+
+  
   app.controller('AccordionDemoCtrl', function ($scope) {
   $scope.oneAtATime = true;
   $scope.groups = [
@@ -174,37 +207,4 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
     isFirstOpen: true,
     isFirstDisabled: false
   };
-});
-
-app.controller('ButtonsCtrl', function ($scope) {
-  $scope.checkModel = {
-    Consumable: false,
-    GoldIncome: false,
-    Vision: false,
-    Armor:false,
-    Health:false,
-    HealthRegen:false,
-    MagicResist:false,
-    AttackSpeed:false,
-    CriticalStrike:false,
-    Damage:false,
-    LifeSteal:false,
-    CDReduction:false,
-    Mana:false,
-    ManaRegen:false,
-    AbilityPower:false,
-    Boots:false,
-    OtherMov:false
-  };
-
-  $scope.checkResults = [];
-
-  $scope.$watchCollection('checkModel', function () {
-    $scope.checkResults = [];
-    angular.forEach($scope.checkModel, function (value, key) {
-      if (value) {
-        $scope.checkResults.push(key);
-      }
-    });
-  });
 });

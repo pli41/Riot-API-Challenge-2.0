@@ -25,8 +25,11 @@
       
       <div ng-controller="ButtonsCtrl">
         <h4>All Items</h4>
-        <pre>Model: {{checkModel}}</pre>
-        <pre>Results: {{checkResults}}</pre>
+        <pre>Results:
+          <div ng-repeat = 'item in checkResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="checkResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+             <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+          </div>
+        </pre>
         <ul>
         <div class="btn-group">
             <label class="btn btn-primary" ng-model="checkModel.Consumable" btn-checkbox>Consumable</label>
@@ -53,7 +56,6 @@
         </div>
         <div class="btn-group">
             <label class="btn btn-primary" ng-model="checkModel.Boots" btn-checkbox>Boots</label>
-            <label class="btn btn-primary" ng-model="checkModel.OtherMov" btn-checkbox>Other Movements</label>
         </div>
         </ul>
     </div>
@@ -65,6 +67,7 @@
             <ol data-drop="true" ng-model='list2' jqyoui-droppable="{multiple:true}">
                 <li ng-repeat="item in list2 track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list2" jqyoui-draggable="{index: {{$index}},animate:true}">
                   <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+                  {{list2}}
                  </li>
                
             </ol>
