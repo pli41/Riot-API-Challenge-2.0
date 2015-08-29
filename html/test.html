@@ -1,5 +1,34 @@
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
 <style>
-  #products { float:left; width: 100%; margin-right: 2em; }
+  
+  *{
+    font-family: Orbitron;
+  }
+  
+  .ng-scope{
+    color: #fff;
+  }
+  
+  .panel{
+    background-color: transparent;
+  }
+  
+  .panel-default > .panel-heading{
+    background-color: #000;
+  }
+  
+  .panel-body{
+    padding: 5px;
+    
+  }
+  
+  #products { 
+    float:left; 
+    width: 100%; 
+    margin-right: 2em; 
+  }
+  
+  
   .panel {
     
   }
@@ -17,9 +46,75 @@
   }
   
   #itemBuilder{
-    margin:auto;
+    margin: auto;
+    padding: auto;
   }
-
+  
+  .checkbox{
+    margin: 2px 2px 3px 4px;
+  }
+  
+  .checkbox>input{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #allItems>input{
+    width: 100%;
+    padding-left: 30px;
+    padding-bottom: 1px;
+    background-color: transparent;
+    background-image:url('http://findicons.com/files/icons/1389/g5_system/32/toolbar_find.png');
+    background-repeat:no-repeat;
+    background-position:left center;
+    background-size: 16px;
+    outline:0;
+  }
+  
+  #allItems>input, select, textarea{
+    color: #fff;
+  }
+  
+  #allItems>input::-webkit-input-placeholder{
+    color:    #FFF;
+  }
+  
+  #allItems_Left{
+    float: left;
+    height: 400px;
+    width: 50%;
+    border: 1px solid red;
+  }
+  #allItems_Right{
+    float: right;
+    height: 400px;
+    width: 50%;
+    border: 1px solid red;
+  }
+  
+  #allItems_Left_Left{
+    float: left;
+    height: 400px;
+    width: 80%;
+    border: 1px solid green;
+  }
+  #allItems_Left_Right{
+    float: left;
+    height: 400px;
+    width: 20%;
+    border: 1px solid green;
+  }
+  
+  .LG_categories, .SM_categories{
+    font-size: 13px;  
+  }
+  
+  .LG_categories{
+    
+  }
+  .SM_categories{
+    color: #817F85;
+  }
 </style>
 
 <div id="itemBuilder">
@@ -48,8 +143,52 @@
       <accordion-group is-open="status.isOpen">
         <accordion-heading>
           All items
-          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isOpen, 'glyphicon-chevron-right': !status.isOpen}"></i>
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isOpen, 'glyphicon-chevron-right': !status.isOpen}"></i>        
         </accordion-heading>
+        <div id="allItems">
+          <input type="search" placeholder="Search"></input>
+          <div id="allItems_Left">
+            <div id="allItems_Left_Left">
+              <div class='LG_categories'>Consumables</div>
+              <div class='LG_categories'>Defense</div>
+              <div class='SM_categories'>Health</div>
+              <div class='SM_categories'>Armor</div>
+              <div class='SM_categories'>Magic Resist</div>
+              <div class='SM_categories'>Health Regen</div>
+              <div class='SM_categories'>Tenacity</div>
+              <div class='LG_categories'>Attack</div>
+              <div class='SM_categories'>Damage</div>
+              <div class='SM_categories'>Critical Strike</div>
+              <div class='SM_categories'>Attack Speed</div>
+              <div class='SM_categories'>Life Steal</div>
+              <div class='LG_categories'>Magic</div>
+              <div class='SM_categories'>Ability Power</div>
+              <div class='SM_categories'>Cooldown Reduction</div>
+              <div class='SM_categories'>Spell Vamp</div>
+              <div class='SM_categories'>Mana</div>
+              <div class='SM_categories'>Mana Regen</div>
+              <div class='LG_categories'>Movement</div>
+              <div class='SM_categories'>Boots</div>
+              <div class='SM_categories'>Other Movement Items</div>
+            </div>
+            <div id="allItems_Left_Right">
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              
+            </div>             
+          </div>
+          <div id="allItems_Right">
+            
+            
+          </div>
+        </div>
       </accordion-group>
   </div>
   
