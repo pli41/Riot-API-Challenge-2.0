@@ -148,7 +148,7 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
    
   }])
   
-app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
+app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items, $window) {
    items.success(function(data) {
         $scope.checkModel = {
         Consumable: false,
@@ -166,7 +166,8 @@ app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
         Mana:false,
         ManaRegen:false,
         AbilityPower:false,
-        Boots:false
+        Boots:false,
+        NonbootsMovement:false
       };
     
       $scope.checkResults = [];
@@ -199,6 +200,8 @@ app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
         }
         console.log("showResults:"+$scope.showResults);
      });
+     //tabs
+       $scope.startingTabs = [{'title':'Jungle','content': data['Jungle']},{'title':'Lane','content':data['Lane']}];
    }); 
 }]);
 

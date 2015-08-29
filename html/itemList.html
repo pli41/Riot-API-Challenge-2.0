@@ -22,6 +22,16 @@
           </ul>
         </div>
       </div>
+      <div ng-controller="ButtonsCtrl">
+      <tabset>
+        <tab ng-repeat="tab in startingTabs" heading="{{tab.title}}">
+              <div ng-repeat = 'item in tab.content' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="tab.content" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+                  <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+                  {{item}}
+                 </div>
+        </tab>
+      </tabset>
+    </div>
       
       <div ng-controller="ButtonsCtrl">
         <h4>All Items</h4>
@@ -56,6 +66,7 @@
         </div>
         <div class="btn-group">
             <label class="btn btn-primary" ng-model="checkModel.Boots" btn-checkbox>Boots</label>
+            <label class="btn btn-primary" ng-model="checkModel.NonbootsMovement" btn-checkbox>Other Movements</label>
         </div>
         </ul>
     </div>
@@ -76,3 +87,5 @@
     <div ng-controller = "jsonCtrl"> 
           <button ng-click="done()" ></button>
     </div>
+    
+    
