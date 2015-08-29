@@ -75,8 +75,8 @@
     <div id="cart">
         <h1 class="ui-widget-header">Item Sets</h1>
         <div class="ui-widget-content">
-            <ol data-drop="true" ng-model='list2' jqyoui-droppable="{multiple:true}">
-                <li ng-repeat="item in list2 track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list2" jqyoui-draggable="{index: {{$index}},animate:true}">
+            <ol data-drop="true" ng-model='list2[0]' jqyoui-droppable="{multiple:true}">
+                <li ng-repeat="item in list2[0] track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list2[0]" ng-dblclick = "onOut(0,item)" jqyoui-draggable="{index: {{$index}},animate:true}">
                   <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
                   {{list2}}
                  </li>

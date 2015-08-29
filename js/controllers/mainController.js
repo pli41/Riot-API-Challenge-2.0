@@ -61,10 +61,9 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
        if($scope.champion == data[i]['name']){
           var buildsdata =  data[i]['data'];
           $scope.list2 = [];
-          $scope.list3 = [];
-          $scope.list4 = [];
-          $scope.list5 = [];
-          $scope.list6 = [];
+          for(var i =0;i<5;i++){
+            $scope.list2[i] = [];
+          }
           
           $scope.list1 = [
           ];
@@ -74,6 +73,13 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
        }
      }
    });
+   $scope.onOut = function(listInt,e) {
+     var index = $scope.list2[listInt].indexOf(e);
+     if(index > -1){
+       console.log(e);
+        $scope.list2[listInt].splice(index, 1);
+     }
+  };
 }])
 
 app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
@@ -86,7 +92,6 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
         "priority": false,
         "sortrank": 0,
         "blocks": [
-            
         ]
      }
      var count = 1;
@@ -105,41 +110,20 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
               "items": [
               ]
       };  
+     $scope.pushItems = function(listInt){
+        for(var i in $scope.list2[listInt]){
+            var item = {};
+            item["id"] =  $scope.list2[listInt][i];
+            item["count"] = 1;
+            $scope.listDone["blocks"][listInt]["items"].push(item);
+        }
+      }
      $scope.listDone["title"] = "Change name here";
      for(var i =0;i<count;i++){
        $scope.listDone['blocks'].push(buildTemplate);
+        $scope.pushItems(count);
      }
-     
-       for(var i in $scope.list2){
-          var item = {};
-          item["id"] = $scope.list2[i];
-          item["count"] = 1;
-          $scope.listDone["blocks"][0]["items"].push(item);
-      }
-       for(var i in $scope.list3){
-          var item = {};
-          item["id"] = $scope.list3[i];
-          item["count"] = 1;
-          $scope.listDone["blocks"][1]["items"].push(item);
-      }
-       for(var i in $scope.list4){
-          var item = {};
-          item["id"] = $scope.list4[i];
-          item["count"] = 1;
-          $scope.listDone["blocks"][2]["items"].push(item);
-      }
-       for(var i in $scope.list5){
-          var item = {};
-          item["id"] = $scope.list5[i];
-          item["count"] = 1;
-          $scope.listDone["blocks"][3]["items"].push(item);
-      }
-      for(var i in $scope.list6){
-          var item = {};
-          item["id"] = $scope.list6[i];
-          item["count"] = 1;
-          $scope.listDone["blocks"][4]["items"].push(item);
-      }
+
       var json = JSON.stringify($scope.listDone);
       var blob = new Blob([json], {type: "application/json"});
       var name = $scope.champion + "builds.json";
@@ -181,7 +165,7 @@ app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items, $window
         });
         for(var i in $scope.checkResults){
           $scope.checkResults[i] = data[$scope.checkResults[i]];
-          console.log("checkResults:"+$scope.checkResults[i]);
+          // console.log("checkResults:"+$scope.checkResults[i]);
         }
         
         $scope.showResults = $scope.checkResults[0];
@@ -198,7 +182,7 @@ app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items, $window
           $scope.showResults = $scope.showResultsTemp;
          
         }
-        console.log("showResults:"+$scope.showResults);
+        // console.log("showResults:"+$scope.showResults);
      });
      //tabs
        $scope.startingTabs = [{'title':'Jungle','content': data['Jungle']},{'title':'Lane','content':data['Lane']}];
