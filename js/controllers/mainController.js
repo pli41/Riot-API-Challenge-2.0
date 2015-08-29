@@ -151,28 +151,29 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
 app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
    items.success(function(data) {
         $scope.checkModel = {
-        Consumable: false,
-        GoldIncome: false,
-        Vision: false,
-        Armor:false,
-        Health:false,
-        HealthRegen:false,
-        MagicResist:false,
-        AttackSpeed:false,
-        CriticalStrike:false,
-        Damage:false,
-        LifeSteal:false,
-        CDReduction:false,
-        Mana:false,
-        ManaRegen:false,
-        AbilityPower:false,
-        Boots:false
+          Consumable: false,
+          GoldIncome: false,
+          Vision: false,
+          Armor:false,
+          Health:false,
+          HealthRegen:false,
+          MagicResist:false,
+          AttackSpeed:false,
+          CriticalStrike:false,
+          Damage:false,
+          LifeSteal:false,
+          CDReduction:false,
+          Mana:false,
+          ManaRegen:false,
+          AbilityPower:false,
+          Boots:false
       };
     
       $scope.checkResults = [];
     
       $scope.$watchCollection('checkModel', function () {
         $scope.checkResults = [];
+        $scope.checked = [];
         angular.forEach($scope.checkModel, function (value, key) {
           if (value) {
             $scope.checkResults=data[key];
@@ -196,7 +197,7 @@ app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items) {
       content: 'Dynamic Group Body - 2'
     }
   ];
-
+  
   $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
   $scope.addItem = function() {
