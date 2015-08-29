@@ -3,10 +3,12 @@
   
   *{
     font-family: Orbitron;
+    
   }
   
   .ng-scope{
     color: #fff;
+    
   }
   
   .panel{
@@ -37,7 +39,7 @@
     width: 40%;
     height: 90%;
     padding-left: 5%;
-    padding-top: 5%;
+    padding-top: 2%;
     margin: 0 0 0 0;
   }
   
@@ -51,7 +53,9 @@
   }
   
   .checkbox{
-    margin: 2px 2px 3px 4px;
+    margin: 0 0 0 0;
+    padding: 1px 2px 21px 33px;
+    
   }
   
   .checkbox>input{
@@ -64,9 +68,9 @@
     padding-left: 30px;
     padding-bottom: 1px;
     background-color: transparent;
-    background-image:url('http://findicons.com/files/icons/1389/g5_system/32/toolbar_find.png');
-    background-repeat:no-repeat;
-    background-position:left center;
+    background-image: url('http://findicons.com/files/icons/1389/g5_system/32/toolbar_find.png');
+    background-repeat: no-repeat;
+    background-position: left center;
     background-size: 16px;
     outline:0;
   }
@@ -76,14 +80,15 @@
   }
   
   #allItems>input::-webkit-input-placeholder{
-    color:    #FFF;
+    color: #FFF;
   }
   
   #allItems_Left{
     float: left;
-    height: 400px;
+    height: 401px;
     width: 50%;
-    border: 1px solid red;
+    border: 1px solid white;
+    border-radius: 10px;
   }
   #allItems_Right{
     float: right;
@@ -93,45 +98,57 @@
   }
   
   #allItems_Left_Left{
+    padding-top: 5px;
     float: left;
     height: 400px;
     width: 80%;
-    border: 1px solid green;
+    border-right: 1px solid white;
   }
   #allItems_Left_Right{
+    padding-top: 5px;
     float: left;
     height: 400px;
     width: 20%;
-    border: 1px solid green;
+    
   }
   
   .LG_categories, .SM_categories{
-    font-size: 13px;  
+    font-size: 12px;  
   }
   
   .LG_categories{
-    
+    padding-left: 3px;
   }
   .SM_categories{
-    color: #817F85;
+   
+    color: #FFBF5F;
+    padding-left: 15px;
   }
 </style>
 
 <div id="itemBuilder">
   <div class="accordion" ng-controller="AccordionDemoCtrl">
     <accordion close-others="oneAtATime">
+      
       <accordion-group is-open="status.isFirstOpen">
         <accordion-heading>
-          Most commonly used items        
+          Starter Items      
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isFirstOpen, 'glyphicon-chevron-right': !status.isFirstOpen}"></i>
+        </accordion-heading> 
+      </accordion-group>
+      
+      <accordion-group is-open="status.isSecondOpen">
+        <accordion-heading>
+          Most commonly used items        
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isSecondOpen, 'glyphicon-chevron-right': !status.isSecondOpen}"></i>
         </accordion-heading>
         <div id="products" ng-controller="oneCtrl">
           <div id="catalog">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-lg-1 col-sm-2 col-xm-1" ng-repeat='item in list1'>
+                <div class="col-sm-2" ng-repeat='item in list1'>
                   <div ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
-                    <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+                    <img style="min-height: 25px; min-width: 25px" src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png">
                   </div>
                 </div>
               </div>
@@ -140,22 +157,26 @@
         </div> 
       </accordion-group>
       
-      <accordion-group is-open="status.isOpen">
+      
+      
+      <accordion-group is-open="status.isThirdOpen">
         <accordion-heading>
           All items
-          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isOpen, 'glyphicon-chevron-right': !status.isOpen}"></i>        
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isThirdOpen, 'glyphicon-chevron-right': !status.isThirdOpen}"></i>        
         </accordion-heading>
         <div id="allItems">
           <input type="search" placeholder="Search"></input>
           <div id="allItems_Left">
             <div id="allItems_Left_Left">
-              <div class='LG_categories'>Consumables</div>
+              <div class='LG_categories'>Tools</div>
+              <div class='SM_categories'>Consumable</div>
+              <div class='SM_categories'>Gold Income</div>
+              <div class='SM_categories'>Vision & Trinkets</div>
               <div class='LG_categories'>Defense</div>
               <div class='SM_categories'>Health</div>
               <div class='SM_categories'>Armor</div>
               <div class='SM_categories'>Magic Resist</div>
               <div class='SM_categories'>Health Regen</div>
-              <div class='SM_categories'>Tenacity</div>
               <div class='LG_categories'>Attack</div>
               <div class='SM_categories'>Damage</div>
               <div class='SM_categories'>Critical Strike</div>
@@ -164,7 +185,6 @@
               <div class='LG_categories'>Magic</div>
               <div class='SM_categories'>Ability Power</div>
               <div class='SM_categories'>Cooldown Reduction</div>
-              <div class='SM_categories'>Spell Vamp</div>
               <div class='SM_categories'>Mana</div>
               <div class='SM_categories'>Mana Regen</div>
               <div class='LG_categories'>Movement</div>
@@ -172,16 +192,28 @@
               <div class='SM_categories'>Other Movement Items</div>
             </div>
             <div id="allItems_Left_Right">
+              <div class="checkbox"></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"></div>
               <div class="checkbox"><input type="checkbox"></input></div>
               <div class="checkbox"><input type="checkbox"></input></div>
               <div class="checkbox"><input type="checkbox"></input></div>
               <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"></div>
               <div class="checkbox"><input type="checkbox"></input></div>
               <div class="checkbox"><input type="checkbox"></input></div>
               <div class="checkbox"><input type="checkbox"></input></div>
               <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"></div>
               <div class="checkbox"><input type="checkbox"></input></div>
-              
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
+              <div class="checkbox"><input type="checkbox"></input></div>
             </div>             
           </div>
           <div id="allItems_Right">
