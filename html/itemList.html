@@ -22,7 +22,43 @@
           </ul>
         </div>
       </div>
-    </div> 
+      
+      <div ng-controller="ButtonsCtrl">
+        <h4>All Items</h4>
+        <pre>Model: {{checkModel}}</pre>
+        <pre>Results: {{checkResults}}</pre>
+        <ul>
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="checkModel.Consumable" btn-checkbox>Consumable</label>
+            <label class="btn btn-primary" ng-model="checkModel.GoldIncome" btn-checkbox>Gold Income</label>
+            <label class="btn btn-primary" ng-model="checkModel.Vision" btn-checkbox>Vision & Trinkets</label>
+        </div>
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="checkModel.Armor" btn-checkbox>Armor</label>
+            <label class="btn btn-primary" ng-model="checkModel.Health" btn-checkbox>Health</label>
+            <label class="btn btn-primary" ng-model="checkModel.HealthRegen" btn-checkbox>Health Regen</label>
+            <label class="btn btn-primary" ng-model="checkModel.MagicResist" btn-checkbox>Magic Resist</label>
+        </div>
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="checkModel.AttackSpeed" btn-checkbox>Attack Speed</label>
+            <label class="btn btn-primary" ng-model="checkModel.CriticalStrike" btn-checkbox>Critical Strike</label>
+            <label class="btn btn-primary" ng-model="checkModel.Damage" btn-checkbox>Damage</label>
+            <label class="btn btn-primary" ng-model="checkModel.LifeSteal" btn-checkbox>Life Steal</label>
+        </div>
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="checkModel.CDReduction" btn-checkbox>CD Reduction</label>
+            <label class="btn btn-primary" ng-model="checkModel.Mana" btn-checkbox>Mana</label>
+            <label class="btn btn-primary" ng-model="checkModel.ManaRegen" btn-checkbox>Mana Regen</label>
+            <label class="btn btn-primary" ng-model="checkModel.AbilityPower" btn-checkbox>Ability Power</label>
+        </div>
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="checkModel.Boots" btn-checkbox>Boots</label>
+            <label class="btn btn-primary" ng-model="checkModel.OtherMov" btn-checkbox>Other Movements</label>
+        </div>
+        </ul>
+    </div>
+    
+  </div> 
     <div id="cart">
         <h1 class="ui-widget-header">Item Sets</h1>
         <div class="ui-widget-content">
@@ -35,8 +71,5 @@
         </div>
     </div>
     <div ng-controller = "jsonCtrl"> 
-          <button    
-          ng-click="done()"
-        ></button>
-
+          <button ng-click="done()" ></button>
     </div>

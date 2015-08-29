@@ -122,33 +122,31 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
       }
        for(var i in $scope.list3){
           var item = {};
-          item["id"] = $scope.list2[i];
+          item["id"] = $scope.list3[i];
           item["count"] = 1;
           $scope.listDone["blocks"][1]["items"].push(item);
       }
        for(var i in $scope.list4){
           var item = {};
-          item["id"] = $scope.list2[i];
+          item["id"] = $scope.list4[i];
           item["count"] = 1;
           $scope.listDone["blocks"][2]["items"].push(item);
       }
        for(var i in $scope.list5){
           var item = {};
-          item["id"] = $scope.list2[i];
+          item["id"] = $scope.list5[i];
           item["count"] = 1;
           $scope.listDone["blocks"][3]["items"].push(item);
       }
       for(var i in $scope.list6){
           var item = {};
-          item["id"] = $scope.list2[i];
+          item["id"] = $scope.list6[i];
           item["count"] = 1;
           $scope.listDone["blocks"][4]["items"].push(item);
       }
-      
-      
       var json = JSON.stringify($scope.listDone);
       var blob = new Blob([json], {type: "application/json"});
-      var name = $scope.champion + "temp.json";
+      var name = $scope.champion + "builds.json";
       saveAs(blob, name);
      }
    
@@ -176,4 +174,37 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
     isFirstOpen: true,
     isFirstDisabled: false
   };
+});
+
+app.controller('ButtonsCtrl', function ($scope) {
+  $scope.checkModel = {
+    Consumable: false,
+    GoldIncome: false,
+    Vision: false,
+    Armor:false,
+    Health:false,
+    HealthRegen:false,
+    MagicResist:false,
+    AttackSpeed:false,
+    CriticalStrike:false,
+    Damage:false,
+    LifeSteal:false,
+    CDReduction:false,
+    Mana:false,
+    ManaRegen:false,
+    AbilityPower:false,
+    Boots:false,
+    OtherMov:false
+  };
+
+  $scope.checkResults = [];
+
+  $scope.$watchCollection('checkModel', function () {
+    $scope.checkResults = [];
+    angular.forEach($scope.checkModel, function (value, key) {
+      if (value) {
+        $scope.checkResults.push(key);
+      }
+    });
+  });
 });
