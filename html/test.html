@@ -30,10 +30,29 @@
     margin-right: 2em; 
   }
   
-  
-  .panel {
-    
+/* Starter Item Accordion*/
+  .nav-tabs>li>a {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: black;
   }
+  .col-lg-1 {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+  }
+  
+  .tab-content {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+  .ui-draggable-dragging{
+    min-height: 64px; 
+    min-width: 64px;
+  }
+  
   .accordion{
     float: left;
     width: 40%;
@@ -88,13 +107,12 @@
     height: 401px;
     width: 50%;
     border: 1px solid white;
-    border-radius: 10px;
   }
   #allItems_Right{
     float: right;
-    height: 400px;
+    height: 401px;
     width: 50%;
-    border: 1px solid red;
+    border: 1px solid white;
   }
   
   #allItems_Left_Left{
@@ -129,12 +147,20 @@
 <div id="itemBuilder">
   <div class="accordion" ng-controller="AccordionDemoCtrl">
     <accordion close-others="oneAtATime">
-      
       <accordion-group is-open="status.isFirstOpen">
         <accordion-heading>
           Starter Items      
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isFirstOpen, 'glyphicon-chevron-right': !status.isFirstOpen}"></i>
         </accordion-heading> 
+        <div ng-controller="ButtonsCtrl">
+          <tabset>
+            <tab ng-repeat="tab in startingTabs" heading="{{tab.title}}">
+                  <div class="col-lg-2" ng-repeat = 'item in tab.content' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="tab.content" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+                    <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+                  </div>
+            </tab>
+          </tabset>
+        </div>
       </accordion-group>
       
       <accordion-group is-open="status.isSecondOpen">
