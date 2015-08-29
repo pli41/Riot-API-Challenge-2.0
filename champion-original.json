@@ -698,7 +698,7 @@
         "attackspeedperlevel": 1.68
       }
     },
-    "Chogath": {
+    "Cho'Gath": {
       "version": "5.2.1",
       "id": "Chogath",
       "key": "31",
@@ -946,7 +946,7 @@
         "attackspeedperlevel": 2.7
       }
     },
-    "DrMundo": {
+    "Dr Mundo": {
       "version": "5.2.1",
       "id": "DrMundo",
       "key": "36",
@@ -1146,7 +1146,7 @@
         "attackspeedperlevel": 2.8
       }
     },
-    "FiddleSticks": {
+    "Fiddle Sticks": {
       "version": "5.2.1",
       "id": "FiddleSticks",
       "key": "9",
@@ -1795,7 +1795,7 @@
         "attackspeedperlevel": 2.61
       }
     },
-    "JarvanIV": {
+    "Jarvan IV": {
       "version": "5.2.1",
       "id": "JarvanIV",
       "key": "59",
@@ -2342,7 +2342,7 @@
         "attackspeedperlevel": 3.4
       }
     },
-    "Khazix": {
+    "Kha'Zix": {
       "version": "5.2.1",
       "id": "Khazix",
       "key": "121",
@@ -2392,7 +2392,7 @@
         "attackspeedperlevel": 2.7
       }
     },
-    "KogMaw": {
+    "Kog'Maw": {
       "version": "5.2.1",
       "id": "KogMaw",
       "key": "96",
@@ -2442,7 +2442,7 @@
         "attackspeedperlevel": 2.65
       }
     },
-    "Leblanc": {
+    "LeBlanc": {
       "version": "5.2.1",
       "id": "Leblanc",
       "key": "7",
@@ -2492,7 +2492,7 @@
         "attackspeedperlevel": 1.4
       }
     },
-    "LeeSin": {
+    "Lee Sin": {
       "version": "5.2.1",
       "id": "LeeSin",
       "key": "64",
@@ -2940,7 +2940,7 @@
         "attackspeedperlevel": 2.125
       }
     },
-    "MasterYi": {
+    "Master Yi": {
       "version": "5.2.1",
       "id": "MasterYi",
       "key": "11",
@@ -2990,7 +2990,7 @@
         "attackspeedperlevel": 2.0
       }
     },
-    "MissFortune": {
+    "Miss Fortune": {
       "version": "5.2.1",
       "id": "MissFortune",
       "key": "21",
@@ -3789,7 +3789,7 @@
         "attackspeedperlevel": 2.215
       }
     },
-    "RekSai": {
+    "Rek'Sai": {
       "version": "5.2.1",
       "id": "RekSai",
       "key": "421",
@@ -5036,7 +5036,7 @@
         "attackspeedperlevel": 2.9
       }
     },
-    "TwistedFate": {
+    "Twisted Fate": {
       "version": "5.2.1",
       "id": "TwistedFate",
       "key": "4",
@@ -5384,7 +5384,7 @@
         "attackspeedperlevel": 2.24
       }
     },
-    "Velkoz": {
+    "Vel'Koz": {
       "version": "5.2.1",
       "id": "Velkoz",
       "key": "161",
