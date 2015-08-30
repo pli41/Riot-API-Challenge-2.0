@@ -1,0 +1,742 @@
+{
+  "data": [
+    {
+      "name": "Aatrox",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Aatrox.png"
+    },
+    {
+      "name": "Ahri",
+      "primary role": "Mage",
+      "secondary role": "Assassin",
+      "image": "Ahri.png"
+    },
+    {
+      "name": "Akali",
+      "primary role": "Assassin",
+      "secondary role": "",
+      "image": "Akali.png"
+    },
+    {
+      "name": "Alistar",
+      "primary role": "Tank",
+      "secondary role": "Suppport",
+      "image": "Alistar.png"
+    },
+    {
+      "name": "Amumu",
+      "primary role": "Tank",
+      "secondary role": "Mage",
+      "image": "Amumu.png"
+    },
+    {
+      "name": "Anivia",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Anivia.png"
+    },
+    {
+      "name": "Annie",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Annie.png"
+    },
+    {
+      "name": "Ashe",
+      "primary role": "Marksman",
+      "secondary role": "Support",
+      "image": "Ashe.png"
+    },
+    {
+      "name": "Azir",
+      "primary role": "Mage",
+      "secondary role": "Marksman",
+      "image": "Azir.png"
+    },
+    {
+      "name": "Blitzcrank",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Blitzcrank.png"
+    },
+    {
+      "name": "Brand",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Brand.png"
+    },
+    {
+      "name": "Braum",
+      "primary role": "Support",
+      "secondary role": "Tank",
+      "image": "Braum.png"
+    },
+    {
+      "name": "Caitlyn",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Caitlyn.png"
+    },
+    {
+      "name": "Cassiopeia",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Cassiopeia.png"
+    },
+    {
+      "name": "Cho'Gath",
+      "primary role": "Tank",
+      "secondary role": "Mage",
+      "image": "Chogath.png"
+    },
+    {
+      "name": "Corki",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Corki.png"
+    },
+    {
+      "name": "Darius",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Darius.png"
+    },
+    {
+      "name": "Diana",
+      "primary role": "Fighter",
+      "secondary role": "Mage",
+      "image": "Diana.png"
+    },
+    {
+      "name": "Draven",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Draven.png"
+    },
+    {
+      "name": "Dr. Mundo",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "DrMundo.png"
+    },
+    {
+      "name": "Elise",
+      "primary role": "Mage",
+      "secondary role": "Fighter",
+      "image": "Elise.png"
+    },
+    {
+      "name": "Evelynn",
+      "primary role": "Assassin",
+      "secondary role": "Mage",
+      "image": "Evelynn.png"
+    },
+    {
+      "name": "Ezreal",
+      "primary role": "Marksman",
+      "secondary role": "Mage",
+      "image": "Ezreal.png"
+    },
+    {
+      "name": "Fiddlesticks",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "FiddleSticks.png"
+    },
+    {
+      "name": "Fiora",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Fiora.png"
+    },
+    {
+      "name": "Fizz",
+      "primary role": "Assassin",
+      "secondary role": "Fighter",
+      "image": "Fizz.png"
+    },
+    {
+      "name": "Galio",
+      "primary role": "Tank",
+      "secondary role": "Mage",
+      "image": "Galio.png"
+    },
+    {
+      "name": "Gangplank",
+      "primary role": "Fighter",
+      "secondary role": "Support",
+      "image": "Gangplank.png"
+    },
+    {
+      "name": "Garen",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Garen.png"
+    },
+    {
+      "name": "Gnar",
+      "primary role": "Fighter",
+      "secondary role": "Marksman",
+      "image": "Gnar.png"
+    },
+    {
+      "name": "Gragas",
+      "primary role": "Fighter",
+      "secondary role": "Mage",
+      "image": "Gragas.png"
+    },
+    {
+      "name": "Graves",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Graves.png"
+    },
+    {
+      "name": "Hecarim",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Hecarim.png"
+    },
+    {
+      "name": "Heimerdinger",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Heimerdinger.png"
+    },
+    {
+      "name": "Irelia",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Irelia.png"
+    },
+    {
+      "name": "Janna",
+      "primary role": "Support",
+      "secondary role": "Mage",
+      "image": "Janna.png"
+    },
+    {
+      "name": "Jarvan IV",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "JarvanIV.png"
+    },
+    {
+      "name": "Jax",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Jax.png"
+    },
+    {
+      "name": "Jayce",
+      "primary role": "Fighter",
+      "secondary role": "Marksman",
+      "image": "Jayce.png"
+    },
+    {
+      "name": "Jinx",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Jinx.png"
+    },
+    {
+      "name": "Kalista",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Kalista.png"
+    },
+    {
+      "name": "Karma",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Karma.png"
+    },
+    {
+      "name": "Kalista",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Kalista.png"
+    },
+    {
+      "name": "Karthus",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Karthus.png"
+    },
+    {
+      "name": "Kassadin",
+      "primary role": "Assassin",
+      "secondary role": "Mage",
+      "image": "Kassadin.png"
+    },
+    {
+      "name": "Katarina",
+      "primary role": "Assassin",
+      "secondary role": "Mage",
+      "image": "Katarina.png"
+    },
+    {
+      "name": "Kayle",
+      "primary role": "Fighter",
+      "secondary role": "Support",
+      "image": "Kayle.png"
+    },
+    {
+      "name": "Kennen",
+      "primary role": "Mage",
+      "secondary role": "Marksman",
+      "image": "Kennen.png"
+    },
+    {
+      "name": "Kha'Zix",
+      "primary role": "Assassin",
+      "secondary role": "Fighter",
+      "image": "Khazix.png"
+    },
+    {
+      "name": "Kog'Maw",
+      "primary role": "Marksman",
+      "secondary role": "Mage",
+      "image": "KogMaw.png"
+    },
+    {
+      "name": "LeBlanc",
+      "primary role": "Assassin",
+      "secondary role": "Mage",
+      "image": "Leblanc.png"
+    },
+    {
+      "name": "Lee Sin",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "LeeSin.png"
+    },
+    {
+      "name": "Leona",
+      "primary role": "Tank",
+      "secondary role": "Support",
+      "image": "Leona.png"
+    },
+    {
+      "name": "Lissandra",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Lissandra.png"
+    },
+    {
+      "name": "Lucian",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Lucian.png"
+    },
+    {
+      "name": "Lulu",
+      "primary role": "Support",
+      "secondary role": "Mage",
+      "image": "Lulu.png"
+    },
+    {
+      "name": "Lux",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Lux.png"
+    },
+    {
+      "name": "Malphite",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Malphite.png"
+    },
+    {
+      "name": "Malzahar",
+      "primary role": "Mage",
+      "secondary role": "Assassin",
+      "image": "Malzahar.png"
+    },
+    {
+      "name": "Maokai",
+      "primary role": "Tank",
+      "secondary role": "Mage",
+      "image": "Maokai.png"
+    },
+    {
+      "name": "Master Yi",
+      "primary role": "Assassin",
+      "secondary role": "Fighter",
+      "image": "MasterYi.png"
+    },
+    {
+      "name": "Miss Fortune",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "MissFortune.png"
+    },
+    {
+      "name": "Wukong",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "MonkeyKing.png"
+    },
+    {
+      "name": "Mordekaiser",
+      "primary role": "Fighter",
+      "secondary role": "Mage",
+      "image": "Mordekaiser.png"
+    },
+    {
+      "name": "Nami",
+      "primary role": "Support",
+      "secondary role": "Mage",
+      "image": "Nami.png"
+    },
+    {
+      "name": "Nasus",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Nasus.png"
+    },
+    {
+      "name": "Nautilus",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Nautilus.png"
+    },
+    {
+      "name": "Nidalee",
+      "primary role": "Assassin",
+      "secondary role": "Fighter",
+      "image": "Nidalee.png"
+    },
+    {
+      "name": "Nocturne",
+      "primary role": "Assassin",
+      "secondary role": "Fighter",
+      "image": "Nocturne.png"
+    },
+    {
+      "name": "Nunu",
+      "primary role": "Support",
+      "secondary role": "Fighter",
+      "image": "Nunu.png"
+    },
+    {
+      "name": "Olaf",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Olaf.png"
+    },
+    {
+      "name": "Orianna",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Orianna.png"
+    },
+    {
+      "name": "Pantheon",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Pantheon.png"
+    },
+    {
+      "name": "Poppy",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Poppy.png"
+    },
+    {
+      "name": "Quinn",
+      "primary role": "Marksman",
+      "secondary role": "Fighter",
+      "image": "Quinn.png"
+    },
+    {
+      "name": "Rammus",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Rammus.png"
+    },
+    {
+      "name": "Rek'Sai",
+      "primary role": "Fighter",
+      "secondary role": "",
+      "image": "RekSai.png"
+    },
+    {
+      "name": "Renekton",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Renekton.png"
+    },
+    {
+      "name": "Rengar",
+      "primary role": "Assassin",
+      "secondary role": "Fighter",
+      "image": "Rengar.png"
+    },
+    {
+      "name": "Riven",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Riven.png"
+    },
+    {
+      "name": "Rumble",
+      "primary role": "Fighter",
+      "secondary role": "Mage",
+      "image": "Rumble.png"
+    },
+    {
+      "name": "Ryze",
+      "primary role": "Mage",
+      "secondary role": "Fighter",
+      "image": "Ryze.png"
+    },
+    {
+      "name": "Sejuani",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Sejuani.png"
+    },
+    {
+      "name": "Shaco",
+      "primary role": "Assassin",
+      "secondary role": "",
+      "image": "Shaco.png"
+    },
+    {
+      "name": "Shen",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Shen.png"
+    },
+    {
+      "name": "Shyvana",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Shyvana.png"
+    },
+    {
+      "name": "Singed",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Singed.png"
+    },
+    {
+      "name": "Sion",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Sion.png"
+    },
+    {
+      "name": "Sivir",
+      "primary role": "Marksman",
+      "secondary role": "",
+      "image": "Sivir.png"
+    },
+    {
+      "name": "Skarner",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Skarner.png"
+    },
+    {
+      "name": "Sona",
+      "primary role": "Support",
+      "secondary role": "Mage",
+      "image": "Sona.png"
+    },
+    {
+      "name": "Soraka",
+      "primary role": "Support",
+      "secondary role": "Mage",
+      "image": "Soraka.png"
+    },
+    {
+      "name": "Swain",
+      "primary role": "Mage",
+      "secondary role": "Fighter",
+      "image": "Swain.png"
+    },
+    {
+      "name": "Syndra",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Syndra.png"
+    },
+    {
+      "name": "Talon",
+      "primary role": "Assassin",
+      "secondary role": "Tank",
+      "image": "Talon.png"
+    },
+    {
+      "name": "Taric",
+      "primary role": "Support",
+      "secondary role": "Fighter",
+      "image": "Taric.png"
+    },
+    {
+      "name": "Teemo",
+      "primary role": "Marksman",
+      "secondary role": "Assassin",
+      "image": "Teemo.png"
+    },
+    {
+      "name": "Thresh",
+      "primary role": "Support",
+      "secondary role": "Fighter",
+      "image": "Thresh.png"
+    },
+    {
+      "name": "Tristana",
+      "primary role": "Marksman",
+      "secondary role": "Assassin",
+      "image": "Tristana.png"
+    },
+    {
+      "name": "Trundle",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Trundle.png"
+    },
+    {
+      "name": "Tryndamere",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Tryndamere.png"
+    },
+    {
+      "name": "Twisted Fate",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "TwistedFate.png"
+    },
+    {
+      "name": "Twitch",
+      "primary role": "Marksman",
+      "secondary role": "Assassin",
+      "image": "Twitch.png"
+    },
+    {
+      "name": "Udyr",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Udyr.png"
+    },
+    {
+      "name": "Urgot",
+      "primary role": "Marksman",
+      "secondary role": "Fighter",
+      "image": "Urgot.png"
+    },
+    {
+      "name": "Varus",
+      "primary role": "Marksman",
+      "secondary role": "Mage",
+      "image": "Varus.png"
+    },
+    {
+      "name": "Vayne",
+      "primary role": "Marksman",
+      "secondary role": "Assassin",
+      "image": "Vayne.png"
+    },
+    {
+      "name": "Veigar",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Veigar.png"
+    },
+    {
+      "name": "Vel'Koz",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Velkoz.png"
+    },
+    {
+      "name": "Vi",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Vi.png"
+    },
+    {
+      "name": "Viktor",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Viktor.png"
+    },
+    {
+      "name": "Vladimir",
+      "primary role": "Mage",
+      "secondary role": "Tank",
+      "image": "Vladimir.png"
+    },
+    {
+      "name": "Volibear",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Volibear.png"
+    },
+    {
+      "name": "Warwick",
+      "primary role": "Fighter",
+      "secondary role": "Tank",
+      "image": "Warwick.png"
+    },
+    {
+      "name": "Xerath",
+      "primary role": "Mage",
+      "secondary role": "Assassin",
+      "image": "Xerath.png"
+    },
+    {
+      "name": "Xin Zhao",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "XinZhao.png"
+    },
+    {
+      "name": "Yasuo",
+      "primary role": "Fighter",
+      "secondary role": "Assassin",
+      "image": "Yasuo.png"
+    },
+    {
+      "name": "Yorick",
+      "primary role": "Fighter",
+      "secondary role": "Mage",
+      "image": "Yorick.png"
+    },
+    {
+      "name": "Zac",
+      "primary role": "Tank",
+      "secondary role": "Fighter",
+      "image": "Zac.png"
+    },
+    {
+      "name": "Zed",
+      "primary role": "Assassin",
+      "secondary role": "Fighter",
+      "image": "Zed.png"
+    },
+    {
+      "name": "Ziggs",
+      "primary role": "Mage",
+      "secondary role": "",
+      "image": "Ziggs.png"
+    },
+    {
+      "name": "Zilean",
+      "primary role": "Support",
+      "secondary role": "Mage",
+      "image": "Zilean.png"
+    },
+    {
+      "name": "Zyra",
+      "primary role": "Mage",
+      "secondary role": "Support",
+      "image": "Zyra.png"
+    }
+  ]
+}

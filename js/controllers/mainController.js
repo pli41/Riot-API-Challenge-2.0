@@ -54,7 +54,7 @@ app.factory('shareTest', function(){
   return {};
 });
 
-app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
+app.controller('oneCtrl',['$scope', 'championbuilds','championbuildspro','shareTest', function ($scope,championbuilds,championbuildspro, shareTest){
   $scope.champion = shareTest.message;
   championbuilds.success(function(data) {
      for(var i in data){
@@ -76,6 +76,17 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
           $scope.list1 = [];
           for(var build in buildsdata){
             $scope.list1.push(build);
+          }
+       }
+     }
+   });
+    championbuildspro.success(function(data) {
+     for(var i in data){
+       if($scope.champion == data[i]['name']){
+          var buildsdata =  data[i]['data'];
+          $scope.listpro = [];
+          for(var build in buildsdata){
+            $scope.listpro.push(build);
           }
        }
      }

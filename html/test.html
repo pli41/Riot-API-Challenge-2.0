@@ -289,7 +289,7 @@
     <h1 class="ui-widget-header">Item Sets</h1>
     <div class="ui-widget-content"  ng-controller="ButtonsCtrl">
       <div class="itemBlock" ng-repeat="block in list2 track by $index">
-        <input type="text" name ="input" ng-model = "blockNames[$index]"></input>
+        <input type="text" name ="input" ng-model = "blockNames[$index]"  placeholder="Change Block Name" ></input>
         <ol data-drop="true" ng-model='block' jqyoui-droppable="{multiple:true}">
           <li ng-repeat="item in block track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item" jqyoui-draggable="{index: {{$index}},animate:true}" ng-dblclick = "onOut(block,item)"
             popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
