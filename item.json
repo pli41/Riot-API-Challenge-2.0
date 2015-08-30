@@ -138,7 +138,7 @@
         "Boots"
       ],
       "stats": {
-        "FlatMovementSpeedMod": 25.0
+        "FlatMovementSpeedMod": 25
       }
     },
     "1004": {
@@ -241,7 +241,7 @@
         "Health"
       ],
       "stats": {
-        "FlatHPPoolMod": 380.0
+        "FlatHPPoolMod": 380
       },
       "depth": 2
     },
@@ -312,7 +312,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 40.0
+        "FlatMagicDamageMod": 40
       }
     },
     "1027": {
@@ -346,7 +346,7 @@
         "Mana"
       ],
       "stats": {
-        "FlatMPPoolMod": 200.0
+        "FlatMPPoolMod": 200
       }
     },
     "1028": {
@@ -388,7 +388,7 @@
         "Health"
       ],
       "stats": {
-        "FlatHPPoolMod": 150.0
+        "FlatHPPoolMod": 150
       }
     },
     "1029": {
@@ -424,7 +424,7 @@
         "Armor"
       ],
       "stats": {
-        "FlatArmorMod": 15.0
+        "FlatArmorMod": 15
       }
     },
     "1031": {
@@ -460,7 +460,7 @@
         "Armor"
       ],
       "stats": {
-        "FlatArmorMod": 40.0
+        "FlatArmorMod": 40
       },
       "depth": 2
     },
@@ -498,7 +498,7 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatSpellBlockMod": 25.0
+        "FlatSpellBlockMod": 25
       }
     },
     "1036": {
@@ -541,7 +541,7 @@
         "Lane"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 10.0
+        "FlatPhysicalDamageMod": 10
       }
     },
     "1037": {
@@ -584,7 +584,7 @@
         "Damage"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 25.0
+        "FlatPhysicalDamageMod": 25
       }
     },
     "1038": {
@@ -617,7 +617,7 @@
         "Damage"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 50.0
+        "FlatPhysicalDamageMod": 50
       }
     },
     "1039": {
@@ -824,7 +824,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 20.0
+        "FlatMagicDamageMod": 20
       }
     },
     "1053": {
@@ -864,7 +864,7 @@
         "LifeSteal"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 10.0,
+        "FlatPhysicalDamageMod": 10,
         "PercentLifeStealMod": 0.08
       },
       "depth": 2
@@ -896,7 +896,7 @@
         "Lane"
       ],
       "stats": {
-        "FlatHPPoolMod": 80.0,
+        "FlatHPPoolMod": 80,
         "FlatHPRegenMod": 1.2
       },
       "effect": {
@@ -931,8 +931,8 @@
         "LifeSteal"
       ],
       "stats": {
-        "FlatHPPoolMod": 70.0,
-        "FlatPhysicalDamageMod": 7.0,
+        "FlatHPPoolMod": 70,
+        "FlatPhysicalDamageMod": 7,
         "PercentLifeStealMod": 0.03
       }
     },
@@ -964,9 +964,9 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 60.0,
+        "FlatHPPoolMod": 60,
         "FlatMPRegenMod": 0.6,
-        "FlatMagicDamageMod": 15.0
+        "FlatMagicDamageMod": 15
       },
       "effect": {
         "Effect1Amount": "4"
@@ -1007,7 +1007,7 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatSpellBlockMod": 45.0
+        "FlatSpellBlockMod": 45
       },
       "depth": 2
     },
@@ -1044,7 +1044,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 60.0
+        "FlatMagicDamageMod": 60
       }
     },
     "1062": {
@@ -1074,7 +1074,7 @@
         "Health"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 16.0,
+        "FlatPhysicalDamageMod": 16,
         "PercentAttackSpeedMod": 0.15
       },
       "effect": {
@@ -1109,7 +1109,7 @@
       ],
       "stats": {
         "FlatMPRegenMod": 1.2,
-        "FlatMagicDamageMod": 35.0
+        "FlatMagicDamageMod": 35
       },
       "effect": {
         "Effect1Amount": "150"
@@ -1142,8 +1142,8 @@
         "HealthRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 100.0,
-        "FlatHPRegenMod": 2.0
+        "FlatHPPoolMod": 100,
+        "FlatHPRegenMod": 2
       },
       "effect": {
         "Effect1Amount": "8"
@@ -1178,8 +1178,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatHPPoolMod": 70.0,
-        "FlatPhysicalDamageMod": 7.0,
+        "FlatHPPoolMod": 70,
+        "FlatPhysicalDamageMod": 7,
         "PercentLifeStealMod": 0.03
       }
     },
@@ -1211,9 +1211,9 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 60.0,
+        "FlatHPPoolMod": 60,
         "FlatMPRegenMod": 0.6,
-        "FlatMagicDamageMod": 15.0
+        "FlatMagicDamageMod": 15
       },
       "effect": {
         "Effect1Amount": "4"
@@ -1247,7 +1247,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
+        "FlatMovementSpeedMod": 45,
         "PercentAttackSpeedMod": 0.25
       },
       "depth": 3
@@ -1280,7 +1280,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
+        "FlatMovementSpeedMod": 45,
         "PercentAttackSpeedMod": 0.25
       },
       "depth": 3
@@ -1313,7 +1313,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
+        "FlatMovementSpeedMod": 45,
         "PercentAttackSpeedMod": 0.25
       },
       "depth": 3
@@ -1346,7 +1346,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
+        "FlatMovementSpeedMod": 45,
         "PercentAttackSpeedMod": 0.25
       },
       "depth": 3
@@ -1379,7 +1379,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
+        "FlatMovementSpeedMod": 45,
         "PercentAttackSpeedMod": 0.25
       },
       "depth": 3
@@ -1412,7 +1412,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 60.0
+        "FlatMovementSpeedMod": 60
       },
       "effect": {
         "Effect1Amount": "0.25"
@@ -1447,7 +1447,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 60.0
+        "FlatMovementSpeedMod": 60
       },
       "effect": {
         "Effect1Amount": "0.25"
@@ -1482,7 +1482,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 60.0
+        "FlatMovementSpeedMod": 60
       },
       "effect": {
         "Effect1Amount": "0.25"
@@ -1517,7 +1517,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 60.0
+        "FlatMovementSpeedMod": 60
       },
       "effect": {
         "Effect1Amount": "0.25"
@@ -1552,7 +1552,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 60.0
+        "FlatMovementSpeedMod": 60
       },
       "effect": {
         "Effect1Amount": "0.25"
@@ -1587,7 +1587,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "15"
@@ -1622,7 +1622,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "15"
@@ -1657,7 +1657,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "15"
@@ -1692,7 +1692,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "15"
@@ -1727,7 +1727,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "15"
@@ -1762,8 +1762,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatArmorMod": 25.0,
-        "FlatMovementSpeedMod": 45.0
+        "FlatArmorMod": 25,
+        "FlatMovementSpeedMod": 45
       },
       "depth": 3
     },
@@ -1795,8 +1795,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatArmorMod": 25.0,
-        "FlatMovementSpeedMod": 45.0
+        "FlatArmorMod": 25,
+        "FlatMovementSpeedMod": 45
       },
       "depth": 3
     },
@@ -1828,8 +1828,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatArmorMod": 25.0,
-        "FlatMovementSpeedMod": 45.0
+        "FlatArmorMod": 25,
+        "FlatMovementSpeedMod": 45
       },
       "depth": 3
     },
@@ -1861,8 +1861,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatArmorMod": 25.0,
-        "FlatMovementSpeedMod": 45.0
+        "FlatArmorMod": 25,
+        "FlatMovementSpeedMod": 45
       },
       "depth": 3
     },
@@ -1894,8 +1894,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatArmorMod": 25.0,
-        "FlatMovementSpeedMod": 45.0
+        "FlatArmorMod": 25,
+        "FlatMovementSpeedMod": 45
       },
       "depth": 3
     },
@@ -1927,8 +1927,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
       },
       "depth": 3
     },
@@ -1960,8 +1960,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
       },
       "depth": 3
     },
@@ -1993,8 +1993,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
       },
       "depth": 3
     },
@@ -2026,8 +2026,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
       },
       "depth": 3
     },
@@ -2059,8 +2059,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
       },
       "depth": 3
     },
@@ -2092,7 +2092,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 105.0
+        "FlatMovementSpeedMod": 105
       },
       "effect": {
         "Effect1Amount": "0",
@@ -2134,7 +2134,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 105.0
+        "FlatMovementSpeedMod": 105
       },
       "effect": {
         "Effect1Amount": "0",
@@ -2176,7 +2176,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 105.0
+        "FlatMovementSpeedMod": 105
       },
       "effect": {
         "Effect1Amount": "0",
@@ -2218,7 +2218,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 105.0
+        "FlatMovementSpeedMod": 105
       },
       "effect": {
         "Effect1Amount": "0",
@@ -2260,7 +2260,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 105.0
+        "FlatMovementSpeedMod": 105
       },
       "effect": {
         "Effect1Amount": "0",
@@ -2302,7 +2302,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15"
@@ -2337,7 +2337,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15"
@@ -2372,7 +2372,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15"
@@ -2407,7 +2407,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15"
@@ -2442,7 +2442,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15"
@@ -2477,7 +2477,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
+        "FlatMovementSpeedMod": 45,
         "PercentAttackSpeedMod": 0.25
       },
       "depth": 3
@@ -2510,7 +2510,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 60.0
+        "FlatMovementSpeedMod": 60
       },
       "effect": {
         "Effect1Amount": "0.25"
@@ -2545,7 +2545,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "15"
@@ -2580,8 +2580,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatArmorMod": 25.0,
-        "FlatMovementSpeedMod": 45.0
+        "FlatArmorMod": 25,
+        "FlatMovementSpeedMod": 45
       },
       "depth": 3
     },
@@ -2613,8 +2613,8 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
       },
       "depth": 3
     },
@@ -2646,7 +2646,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 105.0
+        "FlatMovementSpeedMod": 105
       },
       "effect": {
         "Effect1Amount": "0",
@@ -2688,7 +2688,7 @@
       },
       "tags": [],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15"
@@ -2702,7 +2702,7 @@
       "colloq": ";",
       "plaintext": "Consume to restore Health over time",
       "consumed": true,
-      "stacks": 5.0,
+      "stacks": 5,
       "into": [],
       "image": {
         "full": "2003.png",
@@ -2737,7 +2737,7 @@
       "colloq": ";",
       "plaintext": "Consume to restore Mana over time",
       "consumed": true,
-      "stacks": 5.0,
+      "stacks": 5,
       "into": [],
       "image": {
         "full": "2004.png",
@@ -2797,7 +2797,7 @@
       "colloq": ";",
       "plaintext": "",
       "consumed": true,
-      "stacks": 5.0,
+      "stacks": 5,
       "inStore": false,
       "into": [],
       "image": {
@@ -2867,7 +2867,7 @@
       "colloq": "pink;",
       "plaintext": "Use to temporarily provide vision and stealth detection in an area",
       "consumed": true,
-      "stacks": 2.0,
+      "stacks": 2,
       "into": [],
       "image": {
         "full": "2043.png",
@@ -2903,7 +2903,7 @@
       "colloq": "green;",
       "plaintext": "Use to temporarily provide vision in an area",
       "consumed": true,
-      "stacks": 3.0,
+      "stacks": 3,
       "into": [],
       "image": {
         "full": "2044.png",
@@ -2963,7 +2963,7 @@
         "Vision"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0
+        "FlatHPPoolMod": 400
       },
       "depth": 3
     },
@@ -3029,7 +3029,7 @@
         "Vision"
       ],
       "stats": {
-        "FlatHPPoolMod": 150.0
+        "FlatHPPoolMod": 150
       },
       "depth": 2
     },
@@ -3094,7 +3094,7 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0
+        "FlatHPPoolMod": 200
       },
       "depth": 2
     },
@@ -3159,7 +3159,7 @@
         "NonbootsMovement"
       ],
       "stats": {
-        "FlatArmorMod": 40.0
+        "FlatArmorMod": 40
       },
       "effect": {
         "Effect1Amount": "20",
@@ -3389,8 +3389,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 70.0,
-        "FlatSpellBlockMod": 50.0
+        "FlatMagicDamageMod": 70,
+        "FlatSpellBlockMod": 50
       },
       "effect": {
         "Effect1Amount": "-20"
@@ -3430,8 +3430,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0,
-        "FlatMagicDamageMod": 80.0
+        "FlatMPPoolMod": 250,
+        "FlatMagicDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "0.03",
@@ -3476,8 +3476,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0,
-        "FlatPhysicalDamageMod": 25.0
+        "FlatMPPoolMod": 250,
+        "FlatPhysicalDamageMod": 25
       },
       "effect": {
         "Effect1Amount": "0.02",
@@ -3525,7 +3525,7 @@
         "Boots"
       ],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
+        "FlatMovementSpeedMod": 45,
         "PercentAttackSpeedMod": 0.25
       },
       "depth": 2
@@ -3563,8 +3563,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0,
-        "FlatMagicDamageMod": 80.0
+        "FlatMPPoolMod": 250,
+        "FlatMagicDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "0.03",
@@ -3609,8 +3609,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0,
-        "FlatPhysicalDamageMod": 25.0
+        "FlatMPPoolMod": 250,
+        "FlatPhysicalDamageMod": 25
       },
       "effect": {
         "Effect1Amount": "0.02",
@@ -3656,7 +3656,7 @@
         "Boots"
       ],
       "stats": {
-        "FlatMovementSpeedMod": 60.0
+        "FlatMovementSpeedMod": 60
       },
       "effect": {
         "Effect1Amount": "0.25"
@@ -3700,8 +3700,8 @@
         "ManaRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0,
-        "FlatMPPoolMod": 300.0
+        "FlatHPPoolMod": 200,
+        "FlatMPPoolMod": 300
       },
       "effect": {
         "Effect1Amount": "150",
@@ -3746,7 +3746,7 @@
         "MagicPenetration"
       ],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "15"
@@ -3786,8 +3786,8 @@
         "Slow"
       ],
       "stats": {
-        "FlatHPPoolMod": 700.0,
-        "FlatPhysicalDamageMod": 30.0
+        "FlatHPPoolMod": 700,
+        "FlatPhysicalDamageMod": 30
       },
       "effect": {
         "Effect1Amount": "1.5",
@@ -3829,7 +3829,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 80.0,
+        "FlatMagicDamageMod": 80,
         "PercentMovementSpeedMod": 0.06
       },
       "effect": {
@@ -3879,8 +3879,8 @@
         "Mana"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0,
-        "FlatArmorMod": 20.0
+        "FlatMPPoolMod": 250,
+        "FlatArmorMod": 20
       },
       "effect": {
         "Effect1Amount": "-0.1"
@@ -3920,9 +3920,9 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 500.0,
-        "FlatArmorMod": 60.0,
-        "FlatMagicDamageMod": 30.0
+        "FlatMPPoolMod": 500,
+        "FlatArmorMod": 60,
+        "FlatMagicDamageMod": 30
       },
       "effect": {
         "Effect1Amount": "-0.1",
@@ -3963,8 +3963,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatArmorMod": 50.0,
-        "FlatSpellBlockMod": 50.0
+        "FlatArmorMod": 50,
+        "FlatSpellBlockMod": 50
       },
       "effect": {
         "Effect1Amount": "0.3",
@@ -4006,9 +4006,9 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 300.0,
-        "FlatMPPoolMod": 400.0,
-        "FlatMagicDamageMod": 60.0
+        "FlatHPPoolMod": 300,
+        "FlatMPPoolMod": 400,
+        "FlatMagicDamageMod": 60
       },
       "effect": {
         "Effect1Amount": "20",
@@ -4058,7 +4058,7 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatSpellBlockMod": 25.0
+        "FlatSpellBlockMod": 25
       },
       "effect": {
         "Effect1Amount": "2",
@@ -4099,9 +4099,9 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 450.0,
-        "FlatMPPoolMod": 450.0,
-        "FlatMagicDamageMod": 60.0
+        "FlatHPPoolMod": 450,
+        "FlatMPPoolMod": 450,
+        "FlatMagicDamageMod": 60
       },
       "effect": {
         "Effect1Amount": "20",
@@ -4144,7 +4144,7 @@
         "Damage"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 80.0,
+        "FlatPhysicalDamageMod": 80,
         "FlatCritChanceMod": 0.2
       },
       "effect": {
@@ -4183,7 +4183,7 @@
         "Damage"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 40.0
+        "FlatPhysicalDamageMod": 40
       },
       "effect": {
         "Effect1Amount": "0.35"
@@ -4198,7 +4198,7 @@
       "from": [
         "3003"
       ],
-      "specialRecipe": 3003.0,
+      "specialRecipe": 3003,
       "inStore": false,
       "into": [],
       "image": {
@@ -4220,8 +4220,8 @@
         "Active"
       ],
       "stats": {
-        "FlatMPPoolMod": 1000.0,
-        "FlatMagicDamageMod": 80.0
+        "FlatMPPoolMod": 1000,
+        "FlatMagicDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "0.03",
@@ -4260,7 +4260,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 20.0
+        "FlatMagicDamageMod": 20
       },
       "depth": 2
     },
@@ -4272,7 +4272,7 @@
       "from": [
         "3004"
       ],
-      "specialRecipe": 3004.0,
+      "specialRecipe": 3004,
       "inStore": false,
       "into": [],
       "image": {
@@ -4294,8 +4294,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatMPPoolMod": 1000.0,
-        "FlatPhysicalDamageMod": 25.0
+        "FlatMPPoolMod": 1000,
+        "FlatPhysicalDamageMod": 25
       },
       "depth": 4
     },
@@ -4307,7 +4307,7 @@
       "from": [
         "3008"
       ],
-      "specialRecipe": 3008.0,
+      "specialRecipe": 3008,
       "inStore": false,
       "into": [],
       "image": {
@@ -4329,8 +4329,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatMPPoolMod": 1000.0,
-        "FlatPhysicalDamageMod": 25.0
+        "FlatMPPoolMod": 1000,
+        "FlatPhysicalDamageMod": 25
       },
       "depth": 4
     },
@@ -4370,8 +4370,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0,
-        "FlatPhysicalDamageMod": 20.0
+        "FlatHPPoolMod": 200,
+        "FlatPhysicalDamageMod": 20
       },
       "effect": {
         "Effect1Amount": "20",
@@ -4455,8 +4455,8 @@
         "Boots"
       ],
       "stats": {
-        "FlatArmorMod": 25.0,
-        "FlatMovementSpeedMod": 45.0
+        "FlatArmorMod": 25,
+        "FlatMovementSpeedMod": 45
       },
       "depth": 2
     },
@@ -4468,7 +4468,7 @@
       "from": [
         "3007"
       ],
-      "specialRecipe": 3007.0,
+      "specialRecipe": 3007,
       "inStore": false,
       "into": [],
       "image": {
@@ -4490,8 +4490,8 @@
         "Active"
       ],
       "stats": {
-        "FlatMPPoolMod": 1000.0,
-        "FlatMagicDamageMod": 80.0
+        "FlatMPPoolMod": 1000,
+        "FlatMagicDamageMod": 80
       },
       "depth": 4
     },
@@ -4529,10 +4529,10 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 250.0,
-        "FlatMPPoolMod": 250.0,
-        "FlatArmorMod": 35.0,
-        "FlatMagicDamageMod": 50.0
+        "FlatHPPoolMod": 250,
+        "FlatMPPoolMod": 250,
+        "FlatArmorMod": 35,
+        "FlatMagicDamageMod": 50
       },
       "effect": {
         "Effect1Amount": "-0.1",
@@ -4577,7 +4577,7 @@
         "LifeSteal"
       ],
       "stats": {
-        "FlatHPPoolMod": 500.0
+        "FlatHPPoolMod": 500
       },
       "effect": {
         "Effect1Amount": "400",
@@ -4625,8 +4625,8 @@
         "NonbootsMovement"
       ],
       "stats": {
-        "FlatHPPoolMod": 300.0,
-        "FlatArmorMod": 50.0
+        "FlatHPPoolMod": 300,
+        "FlatArmorMod": 50
       },
       "effect": {
         "Effect1Amount": "3",
@@ -4675,8 +4675,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 200.0,
-        "FlatMagicDamageMod": 25.0
+        "FlatMPPoolMod": 200,
+        "FlatMagicDamageMod": 25
       },
       "effect": {
         "Effect1Amount": "1.5",
@@ -4719,9 +4719,9 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0,
-        "FlatMagicDamageMod": 60.0,
-        "FlatSpellBlockMod": 20.0
+        "FlatHPPoolMod": 200,
+        "FlatMagicDamageMod": 60,
+        "FlatSpellBlockMod": 20
       },
       "effect": {
         "Effect1Amount": "0.5",
@@ -4762,8 +4762,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0,
-        "FlatSpellBlockMod": 60.0
+        "FlatHPPoolMod": 400,
+        "FlatSpellBlockMod": 60
       },
       "effect": {
         "Effect1Amount": "-0.1",
@@ -4811,7 +4811,7 @@
         "Health"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0
+        "FlatHPPoolMod": 200
       },
       "effect": {
         "Effect1Amount": "-0.1"
@@ -4848,8 +4848,8 @@
         "Health"
       ],
       "stats": {
-        "FlatHPPoolMod": 450.0,
-        "FlatArmorMod": 45.0
+        "FlatHPPoolMod": 450,
+        "FlatArmorMod": 45
       },
       "effect": {
         "Effect1Amount": "25",
@@ -4937,7 +4937,7 @@
         "ManaRegen"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0
+        "FlatMPPoolMod": 250
       },
       "effect": {
         "Effect1Amount": "4",
@@ -4983,8 +4983,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0,
-        "FlatPhysicalDamageMod": 40.0
+        "FlatHPPoolMod": 400,
+        "FlatPhysicalDamageMod": 40
       },
       "effect": {
         "Effect1Amount": "-0.2",
@@ -5028,7 +5028,7 @@
         "LifeSteal"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 80.0
+        "FlatPhysicalDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "50",
@@ -5072,7 +5072,7 @@
         "ManaRegen"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0
+        "FlatMPPoolMod": 250
       },
       "effect": {
         "Effect1Amount": "5",
@@ -5116,7 +5116,7 @@
         "OnHit"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 75.0,
+        "FlatPhysicalDamageMod": 75,
         "PercentLifeStealMod": 0.12
       },
       "effect": {
@@ -5157,7 +5157,7 @@
         "Armor"
       ],
       "stats": {
-        "FlatArmorMod": 100.0
+        "FlatArmorMod": 100
       },
       "effect": {
         "Effect1Amount": "0.15",
@@ -5202,7 +5202,7 @@
         "OnHit"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 40.0
+        "FlatPhysicalDamageMod": 40
       },
       "effect": {
         "Effect1Amount": "0.2",
@@ -5250,10 +5250,10 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 250.0,
-        "FlatMPPoolMod": 200.0,
-        "FlatPhysicalDamageMod": 30.0,
-        "FlatMagicDamageMod": 30.0,
+        "FlatHPPoolMod": 250,
+        "FlatMPPoolMod": 200,
+        "FlatPhysicalDamageMod": 30,
+        "FlatMagicDamageMod": 30,
         "PercentMovementSpeedMod": 0.08,
         "PercentAttackSpeedMod": 0.3,
         "FlatCritChanceMod": 0.1
@@ -5300,7 +5300,7 @@
         "Slow"
       ],
       "stats": {
-        "FlatArmorMod": 45.0
+        "FlatArmorMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15",
@@ -5339,7 +5339,7 @@
         "HealthRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 800.0
+        "FlatHPPoolMod": 800
       },
       "effect": {
         "Effect1Amount": "0.015",
@@ -5380,7 +5380,7 @@
         "HealthRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 800.0
+        "FlatHPPoolMod": 800
       },
       "effect": {
         "Effect1Amount": "300",
@@ -5543,7 +5543,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 120.0
+        "FlatMagicDamageMod": 120
       },
       "effect": {
         "Effect1Amount": "35"
@@ -5581,8 +5581,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatArmorMod": 45.0,
-        "FlatMagicDamageMod": 100.0
+        "FlatArmorMod": 45,
+        "FlatMagicDamageMod": 100
       },
       "effect": {
         "Effect1Amount": "25",
@@ -5624,7 +5624,7 @@
       ],
       "stats": {
         "PercentAttackSpeedMod": 0.5,
-        "FlatSpellBlockMod": 30.0
+        "FlatSpellBlockMod": 30
       },
       "effect": {
         "Effect1Amount": "42",
@@ -5668,7 +5668,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 50.0
+        "FlatMagicDamageMod": 50
       },
       "effect": {
         "Effect1Amount": "15",
@@ -5799,7 +5799,7 @@
         "HealthRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 175.0
+        "FlatHPPoolMod": 175
       },
       "effect": {
         "Effect1Amount": "240",
@@ -5843,7 +5843,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 10.0
+        "FlatMagicDamageMod": 10
       },
       "effect": {
         "Effect1Amount": "15",
@@ -5886,8 +5886,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 250.0,
-        "FlatMagicDamageMod": 80.0,
+        "FlatMPPoolMod": 250,
+        "FlatMagicDamageMod": 80,
         "PercentMovementSpeedMod": 0.05
       },
       "effect": {
@@ -5969,8 +5969,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatHPPoolMod": 450.0,
-        "FlatSpellBlockMod": 60.0
+        "FlatHPPoolMod": 450,
+        "FlatSpellBlockMod": 60
       },
       "effect": {
         "Effect1Amount": "40",
@@ -6010,7 +6010,7 @@
         "Damage"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 80.0,
+        "FlatPhysicalDamageMod": 80,
         "FlatCritChanceMod": 0.25
       },
       "effect": {
@@ -6054,8 +6054,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0,
-        "FlatSpellBlockMod": 20.0
+        "FlatHPPoolMod": 200,
+        "FlatSpellBlockMod": 20
       },
       "effect": {
         "Effect1Amount": "15",
@@ -6142,7 +6142,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 30.0
+        "FlatMagicDamageMod": 30
       },
       "effect": {
         "Effect1Amount": "-0.1"
@@ -6181,8 +6181,8 @@
         "Mana"
       ],
       "stats": {
-        "FlatMPPoolMod": 400.0,
-        "FlatArmorMod": 90.0
+        "FlatMPPoolMod": 400,
+        "FlatArmorMod": 90
       },
       "effect": {
         "Effect1Amount": "-0.2",
@@ -6228,8 +6228,8 @@
         "Tenacity"
       ],
       "stats": {
-        "FlatMovementSpeedMod": 45.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
       },
       "depth": 2
     },
@@ -6264,7 +6264,7 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatSpellBlockMod": 70.0
+        "FlatSpellBlockMod": 70
       },
       "effect": {
         "Effect1Amount": "30",
@@ -6307,7 +6307,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 30.0
+        "FlatMagicDamageMod": 30
       },
       "effect": {
         "Effect1Amount": "0.05"
@@ -6388,7 +6388,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 80.0,
+        "FlatMagicDamageMod": 80,
         "PercentAttackSpeedMod": 0.4
       },
       "depth": 3
@@ -6425,8 +6425,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0,
-        "FlatMagicDamageMod": 100.0
+        "FlatHPPoolMod": 400,
+        "FlatMagicDamageMod": 100
       },
       "effect": {
         "Effect1Amount": "-0.4",
@@ -6473,7 +6473,7 @@
         "Boots"
       ],
       "stats": {
-        "FlatMovementSpeedMod": 105.0
+        "FlatMovementSpeedMod": 105
       },
       "effect": {
         "Effect1Amount": "0",
@@ -6521,7 +6521,7 @@
         "OnHit"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 20.0,
+        "FlatPhysicalDamageMod": 20,
         "FlatCritChanceMod": 0.1
       },
       "effect": {
@@ -6564,8 +6564,8 @@
         "SpellVamp"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 30.0,
-        "FlatMagicDamageMod": 40.0
+        "FlatPhysicalDamageMod": 30,
+        "FlatMagicDamageMod": 40
       },
       "effect": {
         "Effect1Amount": "0.04",
@@ -6581,7 +6581,7 @@
       "description": "<stats>+25 Attack Damage</stats><br><br><unique>UNIQUE Passive:</unique> +10% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> +10 Armor Penetration<br><br><i>(Armor Penetration: Physical damage is increased by ignoring an amount of the target's Armor equal to Armor Penetration.)</i>",
       "colloq": ";",
       "plaintext": "Increases physical damage and Cooldown Reduction",
-      "stacks": 0.0,
+      "stacks": 0,
       "from": [
         "1036",
         "1036"
@@ -6614,7 +6614,7 @@
         "Damage"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 25.0
+        "FlatPhysicalDamageMod": 25
       },
       "effect": {
         "Effect1Amount": "-0.1",
@@ -6652,7 +6652,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 80.0
+        "FlatMagicDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "0.35"
@@ -6664,7 +6664,7 @@
       "description": "<stats>+25 Ability Power<br>+200 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)</i><br><br><i>(Unique Passives with the same name do not stack.)</i>",
       "colloq": ";mask",
       "plaintext": "Increases magic damage",
-      "stacks": 0.0,
+      "stacks": 0,
       "from": [
         "1028",
         "1052"
@@ -6694,8 +6694,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0,
-        "FlatMagicDamageMod": 25.0
+        "FlatHPPoolMod": 200,
+        "FlatMagicDamageMod": 25
       },
       "effect": {
         "Effect1Amount": "15"
@@ -6736,7 +6736,7 @@
       ],
       "stats": {
         "PercentAttackSpeedMod": 0.5,
-        "FlatSpellBlockMod": 45.0
+        "FlatSpellBlockMod": 45
       },
       "effect": {
         "Effect1Amount": "0.5",
@@ -6777,8 +6777,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 80.0,
-        "FlatSpellBlockMod": 35.0
+        "FlatPhysicalDamageMod": 80,
+        "FlatSpellBlockMod": 35
       },
       "effect": {
         "Effect1Amount": "0.5",
@@ -6819,7 +6819,7 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatSpellBlockMod": 30.0
+        "FlatSpellBlockMod": 30
       },
       "effect": {
         "Effect1Amount": "90"
@@ -6854,7 +6854,7 @@
         "Damage"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 10.0
+        "FlatPhysicalDamageMod": 10
       },
       "effect": {
         "Effect1Amount": "5",
@@ -6900,7 +6900,7 @@
         "NonbootsMovement"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 30.0,
+        "FlatPhysicalDamageMod": 30,
         "FlatCritChanceMod": 0.15
       },
       "effect": {
@@ -6944,8 +6944,8 @@
         "Slow"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0,
-        "FlatArmorMod": 60.0
+        "FlatHPPoolMod": 400,
+        "FlatArmorMod": 60
       },
       "effect": {
         "Effect1Amount": "4",
@@ -6989,7 +6989,7 @@
         "Slow"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 25.0,
+        "FlatPhysicalDamageMod": 25,
         "PercentLifeStealMod": 0.08
       },
       "effect": {
@@ -7033,7 +7033,7 @@
         "SpellVamp"
       ],
       "stats": {
-        "FlatMagicDamageMod": 40.0
+        "FlatMagicDamageMod": 40
       },
       "effect": {
         "Effect1Amount": "0.12"
@@ -7074,8 +7074,8 @@
         "SpellVamp"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 40.0,
-        "FlatMagicDamageMod": 80.0,
+        "FlatPhysicalDamageMod": 40,
+        "FlatMagicDamageMod": 80,
         "PercentLifeStealMod": 0.1
       },
       "effect": {
@@ -7118,7 +7118,7 @@
         "NonbootsMovement"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 60.0,
+        "FlatPhysicalDamageMod": 60,
         "FlatCritChanceMod": 0.15,
         "PercentLifeStealMod": 0.12
       },
@@ -7135,7 +7135,7 @@
       "description": "<stats>+80 Ability Power<br>+300 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><unique>UNIQUE Passive:</unique> Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters.<br><br><i>(A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.)</i><br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)</i><br><br><i>(Unique Passives with the same name don't stack.)</i>",
       "colloq": ";mask",
       "plaintext": "Spell damage burns enemies for a portion of their Health",
-      "stacks": 0.0,
+      "stacks": 0,
       "from": [
         "3136",
         "1026"
@@ -7162,8 +7162,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 300.0,
-        "FlatMagicDamageMod": 80.0
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "15",
@@ -7205,7 +7205,7 @@
         "SpellVamp"
       ],
       "stats": {
-        "FlatMagicDamageMod": 80.0
+        "FlatMagicDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "0.15",
@@ -7247,7 +7247,7 @@
         "OnHit"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 25.0,
+        "FlatPhysicalDamageMod": 25,
         "PercentAttackSpeedMod": 0.4,
         "PercentLifeStealMod": 0.1
       },
@@ -7292,7 +7292,7 @@
         "Vision"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 12.0,
+        "FlatPhysicalDamageMod": 12,
         "PercentAttackSpeedMod": 0.3
       },
       "depth": 3
@@ -7302,7 +7302,7 @@
       "description": "<stats>+25 Attack Damage<br>+30 Magic Resist</stats><br><br><unique>UNIQUE Passive - Lifeline:</unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 250 magic damage for 5 seconds (90 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)</i>",
       "colloq": ";",
       "plaintext": "Increases Attack Damage and Magic Resist",
-      "stacks": 0.0,
+      "stacks": 0,
       "from": [
         "1036",
         "1033"
@@ -7330,8 +7330,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 25.0,
-        "FlatSpellBlockMod": 30.0
+        "FlatPhysicalDamageMod": 25,
+        "FlatSpellBlockMod": 30
       },
       "effect": {
         "Effect1Amount": "0.3",
@@ -7346,7 +7346,7 @@
       "description": "<stats>+60 Attack Damage<br>+40 Magic Resist</stats><br><br><unique>UNIQUE Passive:</unique> Grants +1 Attack Damage for every 2% of missing Health, up to a maximum of 35 Attack Damage.<br><unique>UNIQUE Passive - Lifeline:</unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 400 magic damage for 5 seconds (90 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)</i>",
       "colloq": ";",
       "plaintext": "Grants bonus Attack Damage when Health is low",
-      "stacks": 0.0,
+      "stacks": 0,
       "from": [
         "3155",
         "1037"
@@ -7372,8 +7372,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 60.0,
-        "FlatSpellBlockMod": 40.0
+        "FlatPhysicalDamageMod": 60,
+        "FlatSpellBlockMod": 40
       },
       "effect": {
         "Effect1Amount": "0.02",
@@ -7416,8 +7416,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatArmorMod": 50.0,
-        "FlatMagicDamageMod": 100.0
+        "FlatArmorMod": 50,
+        "FlatMagicDamageMod": 100
       },
       "effect": {
         "Effect1Amount": "0",
@@ -7462,7 +7462,7 @@
         "CooldownReduction"
       ],
       "stats": {
-        "FlatMovementSpeedMod": 45.0
+        "FlatMovementSpeedMod": 45
       },
       "effect": {
         "Effect1Amount": "-0.15"
@@ -7506,7 +7506,7 @@
         "Vision"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 15.0,
+        "FlatPhysicalDamageMod": 15,
         "PercentAttackSpeedMod": 0.3
       },
       "effect": {
@@ -7551,7 +7551,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 80.0
+        "FlatMagicDamageMod": 80
       },
       "effect": {
         "Effect1Amount": "20",
@@ -7592,9 +7592,9 @@
         "Tenacity"
       ],
       "stats": {
-        "FlatArmorMod": 50.0,
-        "FlatMagicDamageMod": 50.0,
-        "FlatSpellBlockMod": 50.0
+        "FlatArmorMod": 50,
+        "FlatMagicDamageMod": 50,
+        "FlatSpellBlockMod": 50
       },
       "depth": 3
     },
@@ -7631,7 +7631,7 @@
         "Tenacity"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 25.0,
+        "FlatPhysicalDamageMod": 25,
         "PercentMovementSpeedMod": 0.1,
         "PercentAttackSpeedMod": 0.5
       },
@@ -7673,8 +7673,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 60.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMagicDamageMod": 60,
+        "FlatSpellBlockMod": 25
       },
       "effect": {
         "Effect1Amount": "20",
@@ -7716,9 +7716,9 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatHPPoolMod": 350.0,
-        "FlatMPPoolMod": 350.0,
-        "FlatSpellBlockMod": 50.0
+        "FlatHPPoolMod": 350,
+        "FlatMPPoolMod": 350,
+        "FlatSpellBlockMod": 50
       },
       "effect": {
         "Effect1Amount": "0.1",
@@ -7758,7 +7758,7 @@
         "LifeSteal"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 45.0,
+        "FlatPhysicalDamageMod": 45,
         "PercentLifeStealMod": 0.1
       },
       "effect": {
@@ -7802,8 +7802,8 @@
         "Slow"
       ],
       "stats": {
-        "FlatHPPoolMod": 275.0,
-        "FlatPhysicalDamageMod": 55.0
+        "FlatHPPoolMod": 275,
+        "FlatPhysicalDamageMod": 55
       },
       "effect": {
         "Effect1Amount": "20",
@@ -7851,7 +7851,7 @@
         "Vision"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 30.0,
+        "FlatPhysicalDamageMod": 30,
         "FlatCritChanceMod": 0.3
       },
       "effect": {
@@ -7899,9 +7899,9 @@
         "Vision"
       ],
       "stats": {
-        "FlatHPPoolMod": 225.0,
-        "FlatMPPoolMod": 250.0,
-        "FlatArmorMod": 25.0
+        "FlatHPPoolMod": 225,
+        "FlatMPPoolMod": 250,
+        "FlatArmorMod": 25
       },
       "effect": {
         "Effect1Amount": "-0.2",
@@ -7947,8 +7947,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0,
-        "FlatSpellBlockMod": 20.0
+        "FlatHPPoolMod": 400,
+        "FlatSpellBlockMod": 20
       },
       "effect": {
         "Effect1Amount": "15",
@@ -7994,8 +7994,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatArmorMod": 30.0,
-        "FlatMagicDamageMod": 25.0
+        "FlatArmorMod": 30,
+        "FlatMagicDamageMod": 25
       },
       "effect": {
         "Effect1Amount": "0.5",
@@ -8123,7 +8123,7 @@
       "into": [
         "3196"
       ],
-      "specialRecipe": 1.0,
+      "specialRecipe": 1,
       "inStore": false,
       "requiredChampion": "Viktor",
       "image": {
@@ -8182,8 +8182,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0,
-        "FlatSpellBlockMod": 40.0
+        "FlatHPPoolMod": 200,
+        "FlatSpellBlockMod": 40
       },
       "effect": {
         "Effect1Amount": "1.5",
@@ -8223,7 +8223,7 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatSpellBlockMod": 40.0
+        "FlatSpellBlockMod": 40
       },
       "effect": {
         "Effect1Amount": "2",
@@ -8426,7 +8426,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 100.0,
+        "FlatMagicDamageMod": 100,
         "PercentMovementSpeedMod": 0.1
       },
       "effect": {
@@ -8474,7 +8474,7 @@
         "Vision"
       ],
       "stats": {
-        "FlatMagicDamageMod": 80.0,
+        "FlatMagicDamageMod": 80,
         "PercentMovementSpeedMod": 0.06
       },
       "effect": {
@@ -8553,7 +8553,7 @@
         "Lane"
       ],
       "stats": {
-        "FlatHPPoolMod": 75.0
+        "FlatHPPoolMod": 75
       },
       "effect": {
         "Effect1Amount": "200",
@@ -8591,7 +8591,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 5.0
+        "FlatMagicDamageMod": 5
       },
       "effect": {
         "Effect1Amount": "10",
@@ -9003,7 +9003,7 @@
         "HealthRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 500.0
+        "FlatHPPoolMod": 500
       },
       "effect": {
         "Effect1Amount": "400",
@@ -9043,7 +9043,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 100.0
+        "FlatMagicDamageMod": 100
       },
       "effect": {
         "Effect1Amount": "200",
@@ -9087,7 +9087,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 100.0
+        "FlatMagicDamageMod": 100
       },
       "effect": {
         "Effect1Amount": "20",
@@ -9131,7 +9131,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 50.0
+        "FlatMagicDamageMod": 50
       },
       "effect": {
         "Effect1Amount": "-0.2"
@@ -9170,7 +9170,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 100.0
+        "FlatMagicDamageMod": 100
       },
       "effect": {
         "Effect1Amount": "10",
@@ -9245,7 +9245,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 40.0
+        "FlatMagicDamageMod": 40
       },
       "effect": {
         "Effect1Amount": "0.08",
@@ -9287,7 +9287,7 @@
         "ManaRegen"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 80.0,
+        "FlatPhysicalDamageMod": 80,
         "PercentLifeStealMod": 0.1
       },
       "effect": {
@@ -9329,8 +9329,8 @@
         "SpellBlock"
       ],
       "stats": {
-        "FlatArmorMod": 60.0,
-        "FlatSpellBlockMod": 60.0
+        "FlatArmorMod": 60,
+        "FlatSpellBlockMod": 60
       },
       "effect": {
         "Effect1Amount": "20",
@@ -9792,7 +9792,7 @@
         "NonbootsMovement"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 30.0,
+        "FlatPhysicalDamageMod": 30,
         "PercentMovementSpeedMod": 0.04,
         "PercentAttackSpeedMod": 0.2
       },
@@ -9899,7 +9899,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3708": {
       "name": "Enchantment: Runeglaive",
@@ -9933,7 +9933,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 200.0
+        "FlatMPPoolMod": 200
       },
       "effect": {
         "Effect1Amount": "45",
@@ -9947,7 +9947,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3709": {
       "name": "Enchantment: Cinderhulk",
@@ -9991,7 +9991,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3710": {
       "name": "Enchantment: Devourer",
@@ -10039,7 +10039,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3711": {
       "name": "Poacher's Knife",
@@ -10185,7 +10185,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3715": {
       "name": "Skirmisher's Sabre",
@@ -10269,7 +10269,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 200.0
+        "FlatMPPoolMod": 200
       },
       "effect": {
         "Effect1Amount": "45",
@@ -10283,7 +10283,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3717": {
       "name": "Enchantment: Cinderhulk",
@@ -10327,7 +10327,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3718": {
       "name": "Enchantment: Devourer",
@@ -10375,7 +10375,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3719": {
       "name": "Enchantment: Warrior",
@@ -10421,7 +10421,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3720": {
       "name": "Enchantment: Runeglaive",
@@ -10455,7 +10455,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 200.0
+        "FlatMPPoolMod": 200
       },
       "effect": {
         "Effect1Amount": "45",
@@ -10469,7 +10469,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3721": {
       "name": "Enchantment: Cinderhulk",
@@ -10513,7 +10513,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3722": {
       "name": "Enchantment: Devourer",
@@ -10561,7 +10561,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3723": {
       "name": "Enchantment: Warrior",
@@ -10606,7 +10606,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3724": {
       "name": "Enchantment: Runeglaive",
@@ -10640,7 +10640,7 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMPPoolMod": 200.0
+        "FlatMPPoolMod": 200
       },
       "effect": {
         "Effect1Amount": "45",
@@ -10654,7 +10654,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3725": {
       "name": "Enchantment: Cinderhulk",
@@ -10698,7 +10698,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3726": {
       "name": "Enchantment: Devourer",
@@ -10746,7 +10746,7 @@
       },
       "depth": 3,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3742": {
       "name": "Dead Man's Plate",
@@ -10781,8 +10781,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatHPPoolMod": 600.0,
-        "FlatArmorMod": 50.0
+        "FlatHPPoolMod": 600,
+        "FlatArmorMod": 50
       },
       "effect": {
         "Effect1Amount": "60",
@@ -10825,8 +10825,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatMagicDamageMod": 40.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatMagicDamageMod": 40,
+        "FlatSpellBlockMod": 25
       },
       "effect": {
         "Effect1Amount": "-0.2",
@@ -10872,8 +10872,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 250.0,
-        "FlatSpellBlockMod": 25.0
+        "FlatHPPoolMod": 250,
+        "FlatSpellBlockMod": 25
       },
       "effect": {
         "Effect1Amount": "-0.2",
@@ -10920,8 +10920,8 @@
         "OnHit"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0,
-        "FlatPhysicalDamageMod": 50.0
+        "FlatHPPoolMod": 400,
+        "FlatPhysicalDamageMod": 50
       },
       "effect": {
         "Effect1Amount": "0.025",
@@ -10969,7 +10969,7 @@
         "Health"
       ],
       "stats": {
-        "FlatHPPoolMod": 300.0
+        "FlatHPPoolMod": 300
       },
       "effect": {
         "Effect1Amount": "5",
@@ -11012,8 +11012,8 @@
         "Slow"
       ],
       "stats": {
-        "FlatHPPoolMod": 500.0,
-        "FlatMPPoolMod": 300.0
+        "FlatHPPoolMod": 500,
+        "FlatMPPoolMod": 300
       },
       "effect": {
         "Effect1Amount": "0.6",
@@ -11061,7 +11061,7 @@
         "HealthRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 200.0
+        "FlatHPPoolMod": 200
       },
       "depth": 2
     },
@@ -11070,7 +11070,7 @@
       "description": "<stats>+60 Ability Power<br>+400 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><unique>UNIQUE Active - Disguise:</unique> Teleport to target ally and take on their appearance for 30 seconds. Casting a spell or attacking breaks the deception (90 second cooldown).<br><br><i><font color='#FDD017'>''Faces can not but lie.''</font></i>",
       "colloq": ";mirror",
       "plaintext": "Disguise yourself as an allied champion.",
-      "stacks": 0.0,
+      "stacks": 0,
       "from": [
         "3136",
         "1028"
@@ -11100,8 +11100,8 @@
         "SpellDamage"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0,
-        "FlatMagicDamageMod": 60.0
+        "FlatHPPoolMod": 400,
+        "FlatMagicDamageMod": 60
       },
       "effect": {
         "Effect1Amount": "30",
@@ -11350,7 +11350,7 @@
         "HealthRegen"
       ],
       "stats": {
-        "FlatHPPoolMod": 400.0
+        "FlatHPPoolMod": 400
       },
       "effect": {
         "Effect1Amount": "0.6",
@@ -11392,7 +11392,7 @@
         "LifeSteal"
       ],
       "stats": {
-        "FlatPhysicalDamageMod": 20.0,
+        "FlatPhysicalDamageMod": 20,
         "PercentLifeStealMod": 0.1
       },
       "effect": {
@@ -11414,7 +11414,7 @@
       "from": [
         "3710"
       ],
-      "specialRecipe": 3710.0,
+      "specialRecipe": 3710,
       "inStore": false,
       "hideFromAll": true,
       "into": [],
@@ -11452,7 +11452,7 @@
       },
       "depth": 4,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3931": {
       "name": "Enchantment: Sated Devourer",
@@ -11461,7 +11461,7 @@
       "from": [
         "3718"
       ],
-      "specialRecipe": 3718.0,
+      "specialRecipe": 3718,
       "inStore": false,
       "hideFromAll": true,
       "into": [],
@@ -11499,7 +11499,7 @@
       },
       "depth": 4,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3932": {
       "name": "Enchantment: Sated Devourer",
@@ -11508,7 +11508,7 @@
       "from": [
         "3722"
       ],
-      "specialRecipe": 3722.0,
+      "specialRecipe": 3722,
       "inStore": false,
       "hideFromAll": true,
       "into": [],
@@ -11546,7 +11546,7 @@
       },
       "depth": 4,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     },
     "3933": {
       "name": "Enchantment: Sated Devourer",
@@ -11555,7 +11555,7 @@
       "from": [
         "3726"
       ],
-      "specialRecipe": 3726.0,
+      "specialRecipe": 3726,
       "inStore": false,
       "hideFromAll": true,
       "into": [],
@@ -11593,7 +11593,7 @@
       },
       "depth": 4,
       "colloq": null,
-      "plaintext": null
+      "plaintext": "No short description available"
     }
   },
   "groups": [

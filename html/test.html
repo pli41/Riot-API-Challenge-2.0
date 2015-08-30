@@ -182,7 +182,8 @@
         <div ng-controller="ButtonsCtrl">
           <tabset>
             <tab ng-repeat="tab in startingTabs" heading="{{tab.title}}">
-                  <div class="col-lg-2" ng-repeat = 'item in tab.content' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="tab.content" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+                  <div class="col-lg-2" ng-repeat = 'item in tab.content' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="tab.content" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                    popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                     <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
                   </div>
             </tab>
@@ -195,12 +196,13 @@
           Most commonly used items        
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isSecondOpen, 'glyphicon-chevron-right': !status.isSecondOpen}"></i>
         </accordion-heading>
-        <div id="products" ng-controller="oneCtrl">
+        <div id="products" ng-controller="ButtonsCtrl">
           <div id="catalog">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-2" ng-repeat='item in list1'>
-                  <div ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+                  <div ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                    popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                     <img style="min-height: 25px; min-width: 25px" src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png">
                   </div>
                 </div>
@@ -272,7 +274,8 @@
             </div>
             <div id="allItems_Right">
                 <div class="container">
-                  <div class="col-lg-3" ng-repeat = 'item in showResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+                  <div class="col-lg-3" ng-repeat = 'item in showResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                    popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                     <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
                   </div>
                 </div>
@@ -284,13 +287,13 @@
   
   <div id="itemSet">
     <h1 class="ui-widget-header">Item Sets</h1>
-    <div class="ui-widget-content">
+    <div class="ui-widget-content"  ng-controller="ButtonsCtrl">
       <div class="itemBlock" ng-repeat="block in list2 track by $index">
-        <input type="text" name ="input" ng-model = "blockNames[$index]">{{blockNames[$index]}}</input>
+        <input type="text" name ="input" ng-model = "blockNames[$index]"></input>
         <ol data-drop="true" ng-model='block' jqyoui-droppable="{multiple:true}">
-          <li ng-repeat="item in block track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item" jqyoui-draggable="{index: {{$index}},animate:true}">
+          <li ng-repeat="item in block track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item" jqyoui-draggable="{index: {{$index}},animate:true}" ng-dblclick = "onOut(block,item)"
+            popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
             <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
-            {{list2}}
           </li>
 
         </ol>

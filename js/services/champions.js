@@ -27,4 +27,13 @@ app.factory('items', ['$http', function($http) {
               return err; 
             }); 
 }]);
+app.factory('itemOriginal', ['$http', function($http) { 
+  return $http.get('item.json') 
+            .success(function(data) { 
+              return data;
+            }) 
+            .error(function(err) { 
+              return err; 
+            }); 
+}]);
 

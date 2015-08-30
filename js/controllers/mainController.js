@@ -80,11 +80,11 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
        }
      }
    });
-   $scope.onOut = function(listInt,e) {
-     var index = $scope.list2[listInt].indexOf(e);
+   $scope.onOut = function(list,e) {
+     var index = list.indexOf(e);
      if(index > -1){
        // console.log(e);
-        $scope.list2[listInt].splice(index, 1);
+       list.splice(index, 1);
      }
    };
 }])
@@ -153,8 +153,14 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
    
   }])
   
-app.controller('ButtonsCtrl', ['$scope', 'items',function ($scope,items, $window) {
+app.controller('ButtonsCtrl', ['$scope', 'items','itemOriginal',function ($scope,items,itemOriginal, $window) {
+    itemOriginal.success(function(data){
+        $scope.itemOriginalData = data['data'];
+        // console.log(data['data']);
+    });
+        
    items.success(function(data) {
+   
         $scope.checkModel = {
         Consumable: false,
         GoldIncome: false,
