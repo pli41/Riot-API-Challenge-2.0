@@ -1,3 +1,5 @@
+
+
 var app = angular.module('app', ['ngAnimate','ui.bootstrap','ui.router','ngDragDrop']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
@@ -24,10 +26,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         },
 
         'itemList':{
-          templateUrl: 'html/itemList.html',
-          controller: 'oneCtrl as itemList'
-          // templateUrl: 'html/test.html',
-          // controller: 'oneCtrl as test'
+          // templateUrl: 'html/itemList.html',
+          // controller: 'oneCtrl as itemList'
+          templateUrl: 'html/test.html',
+          controller: 'oneCtrl as test'
 
         }
       }

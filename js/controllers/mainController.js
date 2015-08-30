@@ -56,17 +56,24 @@ app.factory('shareTest', function(){
 
 app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
   $scope.champion = shareTest.message;
-   championbuilds.success(function(data) {
+  championbuilds.success(function(data) {
      for(var i in data){
        if($scope.champion == data[i]['name']){
           var buildsdata =  data[i]['data'];
-          $scope.list2 = [];
-          for(var i =0;i<5;i++){
-            $scope.list2[i] = [];
-          }
           
-          $scope.list1 = [
-          ];
+          var maxBlockNum = 5;
+          $scope.list2 = [];
+          console.log('total number of blocks is ' + $scope.list2.length);
+          $scope.blockNames=[];
+          
+          $scope.addBlock = function(){
+            if($scope.list2.length < maxBlockNum){
+              $scope.list2[$scope.list2.length]=[];
+              console.log($scope.list2);
+            }
+          };
+                  
+          $scope.list1 = [];
           for(var build in buildsdata){
             $scope.list1.push(build);
           }
@@ -79,12 +86,13 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
        // console.log(e);
         $scope.list2[listInt].splice(index, 1);
      }
-  };
+   };
 }])
 
 app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
   $scope.name = $scope.champion + " Page";
      $scope.done = function(){
+       console.log("clicked done");
       $scope.listDone = {
           "title": $scope.champion + " Page",
           "type": "custom",
@@ -95,19 +103,12 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
           "blocks": [
           ]
       }
-      var count = 5;
-      $scope.addblock = function(){
-        //add block here
-        
-        count ++;
-      }
-        
         //change name
         if($scope.name!=""){
           $scope.listDone["title"] = $scope.name;
         }
         
-        for(var i = 0; i<count ;i++){
+        for(var i = 0; i<$scope.list2.length ;i++){
              if($scope.list2[i][0]!=undefined){
                 var buildTemplate =  {
                   "type": "name",
@@ -119,7 +120,9 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
                   "items": [
                   ]
                 };
-                
+                if($scope.blockNames[i]!=""){
+                   buildTemplate["type"] = $scope.blockNames[i];
+                 }
                  for(var m in $scope.list2[i]){
                    $scope.duplicate = 'false';
                    for( n in buildTemplate['items']){
@@ -137,7 +140,8 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
                       buildTemplate['items'].push(item);
                    }
                 }
-                
+              console.log($scope.list2[i]);
+              console.log("buildTemplate"+buildTemplate);
               $scope.listDone['blocks'].push(buildTemplate); 
            }   
         }
@@ -214,5 +218,50 @@ app.controller('AccordionDemoCtrl', function ($scope) {
     isFirstDisabled: false,
     isSecondOpen: false,
     isThirdOpen: false
+  };
+});
+
+app.controller('blockMgnCtrl', function ($scope){
+  var maxGroupNo = 5;
+  $scope.groups = [
+  {
+    title: 'Dynamic Group Header - 1',
+    content: 
+    [
+      {
+        title: 'item 1-1',
+      },
+      {
+        title: 'item 2-1'
+      }
+    ]
+  }, 
+  {
+    title: 'Dynamic Group Header - 2',
+    content: 
+    [
+      {
+        title: 'item 2-1',
+      },
+      {
+        title: 'item 2-2'
+      }
+    ]
+  }];
+
+  $scope.addGroup = function() {
+    var newGroupNo = $scope.groups.length + 1;
+    if(newGroupNo < maxGroupNo+1){
+      $scope.groups.push(
+        {
+          title: 'No.' + newGroupNo,
+          content:
+          [
+            {title: newGroupNo+'-1 item'},
+            {title: newGroupNo+'-2 item'}
+          ]  
+        }
+      );
+    }
   };
 });

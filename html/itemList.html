@@ -10,19 +10,6 @@
     </style>
   </head>
   <div id="products" ng-controller="oneCtrl">
-
-      <h1 class="ui-widget-header">Items</h1>
-      <div id="catalog">
-        <h2><a href="#">Most Common</a></h2>
-        <div>
-          <ul>
-            <li ng-repeat='item in list1' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
-              <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
-            </li>
-          </ul>
-        </div>
-      </div>
-      
       
       <div ng-controller="ButtonsCtrl">
         <h4>All Items</h4>
@@ -120,8 +107,7 @@
     <div ng-controller = "jsonCtrl"> 
           <button ng-click="done()" ></button>
           
-         <input type="text" name="input" ng-model="name">
-          <button ng-click="changeName(name)" ></button>
+        
     </div>
     
     

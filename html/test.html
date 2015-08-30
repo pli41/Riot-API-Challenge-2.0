@@ -1,9 +1,7 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
 <style>
-  
   *{
-    font-family: Orbitron;
-    
+    font-family: Orbitron; 
   }
   
   .ng-scope{
@@ -36,12 +34,6 @@
     padding-bottom: 2px;
     background-color: black;
   }
-  .col-lg-1 {
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-bottom: 1px;
-    padding-top: 1px;
-  }
   
   .tab-content {
     margin-left: 1%;
@@ -62,8 +54,13 @@
     margin: 0 0 0 0;
   }
   
-  #cart{
+  #itemSet{
     float: right;
+    width: 60%;
+    height: 90%;
+    border: 1px solid white;
+    margin: 2% 0 0 0;
+    padding-right: 5%;
   }
   
   #itemBuilder{
@@ -82,7 +79,7 @@
     padding: 0;
   }
   
-  #allItems>input{
+  #allItems>div>input{
     width: 100%;
     padding-left: 30px;
     padding-bottom: 1px;
@@ -130,6 +127,23 @@
     
   }
   
+  #allItems_Right>pre{
+    background-color: transparent;
+    padding: 5px;
+    margin: 0px;
+  }
+  
+  #allItems_Right>.container{
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
+  
+  #allItems_Right>.container>.col-lg-3{
+    padding: 6px 6px 6px 6px;
+  }
+  
   .LG_categories, .SM_categories{
     font-size: 12px;  
   }
@@ -137,14 +151,27 @@
   .LG_categories{
     padding-left: 3px;
   }
-  .SM_categories{
-   
+  
+  .SM_categories{ 
     color: #FFBF5F;
     padding-left: 15px;
   }
+  .ui-widget-content>ol{
+    border: 1px dashed red;
+    min-height: 50px;
+  }
+  
+  .itemBlock{
+    min-height: 50px;
+  }
+  
+  .itemBlock>ol{
+    border: 1px dashed red;
+    padding-top: 40px;
+  }
 </style>
 
-<div id="itemBuilder">
+<div id="itemBuilder" ng-controller="oneCtrl">
   <div class="accordion" ng-controller="AccordionDemoCtrl">
     <accordion close-others="oneAtATime">
       <accordion-group is-open="status.isFirstOpen">
@@ -191,78 +218,95 @@
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isThirdOpen, 'glyphicon-chevron-right': !status.isThirdOpen}"></i>        
         </accordion-heading>
         <div id="allItems">
-          <input type="search" placeholder="Search"></input>
-          <div id="allItems_Left">
-            <div id="allItems_Left_Left">
-              <div class='LG_categories'>Tools</div>
-              <div class='SM_categories'>Consumable</div>
-              <div class='SM_categories'>Gold Income</div>
-              <div class='SM_categories'>Vision & Trinkets</div>
-              <div class='LG_categories'>Defense</div>
-              <div class='SM_categories'>Health</div>
-              <div class='SM_categories'>Armor</div>
-              <div class='SM_categories'>Magic Resist</div>
-              <div class='SM_categories'>Health Regen</div>
-              <div class='LG_categories'>Attack</div>
-              <div class='SM_categories'>Damage</div>
-              <div class='SM_categories'>Critical Strike</div>
-              <div class='SM_categories'>Attack Speed</div>
-              <div class='SM_categories'>Life Steal</div>
-              <div class='LG_categories'>Magic</div>
-              <div class='SM_categories'>Ability Power</div>
-              <div class='SM_categories'>Cooldown Reduction</div>
-              <div class='SM_categories'>Mana</div>
-              <div class='SM_categories'>Mana Regen</div>
-              <div class='LG_categories'>Movement</div>
-              <div class='SM_categories'>Boots</div>
-              <div class='SM_categories'>Other Movement Items</div>
+          <div ng-controller="ButtonsCtrl">
+            <input type="search" placeholder="Search" ng-model="searchText"></input>
+            <div id="allItems_Left">
+              <div id="allItems_Left_Left">
+                <div class='LG_categories'>Tools</div>
+                <div class='SM_categories'>Consumable</div>
+                <div class='SM_categories'>Gold Income</div>
+                <div class='SM_categories'>Vision & Trinkets</div>
+                <div class='LG_categories'>Defense</div>
+                <div class='SM_categories'>Armor</div>
+                <div class='SM_categories'>Health</div>
+                <div class='SM_categories'>Health Regen</div>
+                <div class='SM_categories'>Magic Resist</div>
+                <div class='LG_categories'>Attack</div>
+                <div class='SM_categories'>Attack Speed</div>
+                <div class='SM_categories'>Critical Strike</div>
+                <div class='SM_categories'>Damage</div>
+                <div class='SM_categories'>Life Steal</div>
+                <div class='LG_categories'>Magic</div>
+                <div class='SM_categories'>Cooldown Reduction</div>
+                <div class='SM_categories'>Mana</div>
+                <div class='SM_categories'>Mana Regen</div>
+                <div class='SM_categories'>Ability Power</div>
+                <div class='LG_categories'>Movement</div>
+                <div class='SM_categories'>Boots</div>
+                <div class='SM_categories'>Other Movement Items</div>
+              </div>
+              <div id="allItems_Left_Right">
+                <div class="checkbox"></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.Consumable" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.GoldIncome" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.Vision" btn-checkbox></input></div>
+                <div class="checkbox"></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.Armor" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.Health" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.HealthRegen" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.MagicResist" btn-checkbox></input></div>
+                <div class="checkbox"></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.AttackSpeed" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.CriticalStrike" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.Damage" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.LifeSteal" btn-checkbox></input></div>
+                <div class="checkbox"></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.CDReduction" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.Mana" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.ManaRegen" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.AbilityPower" btn-checkbox></input></div>
+                <div class="checkbox"></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.Boots" btn-checkbox></input></div>
+                <div class="checkbox"><input type="checkbox" class="btn btn-primary" ng-model="checkModel.NonbootsMovement" btn-checkbox></input></div>
+              </div>             
             </div>
-            <div id="allItems_Left_Right">
-              <div class="checkbox"></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-              <div class="checkbox"><input type="checkbox"></input></div>
-            </div>             
-          </div>
-          <div id="allItems_Right">
-            
-            
+            <div id="allItems_Right">
+                <div class="container">
+                  <div class="col-lg-3" ng-repeat = 'item in showResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">
+                    <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
       </accordion-group>
   </div>
   
-  <div id="cart">
+  <div id="itemSet">
     <h1 class="ui-widget-header">Item Sets</h1>
     <div class="ui-widget-content">
-        <ol data-drop="true" ng-model='list2' jqyoui-droppable="{multiple:true}">
-            <li ng-repeat="item in list2[0] track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="list2[0]" jqyoui-draggable="{index: {{$index}},animate:true}">
-              <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
-            </li>
-            
+      <div class="itemBlock" ng-repeat="block in list2 track by $index">
+        <input type="text" name ="input" ng-model = "blockNames[$index]">{{blockNames[$index]}}</input>
+        <ol data-drop="true" ng-model='block' jqyoui-droppable="{multiple:true}">
+          <li ng-repeat="item in block track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item" jqyoui-draggable="{index: {{$index}},animate:true}">
+            <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+            {{list2}}
+          </li>
+
         </ol>
+      </div>      
+    </div>
+    
+    
+    <div ng-controller = "jsonCtrl">
+        <button ng-click="done()">Generate JSON</button>
+         <input type="text" name="input" ng-model="name">
+    </div>
+    
+    <div>
+        <button ng-click="addBlock()">Add Block</button>
     </div>
   </div>
-  <div ng-controller = "jsonCtrl">
-        <button ng-click="done()">Generate JSON</button>
-  </div>
+  
 
 </div>
