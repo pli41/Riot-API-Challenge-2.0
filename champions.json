@@ -115,7 +115,7 @@
       "image": "Draven.png"
     },
     {
-      "name": "Dr Mundo",
+      "name": "Dr. Mundo",
       "primary role": "Fighter",
       "secondary role": "Tank",
       "image": "DrMundo.png"
@@ -139,7 +139,7 @@
       "image": "Ezreal.png"
     },
     {
-      "name": "Fiddle Sticks",
+      "name": "Fiddlesticks",
       "primary role": "Mage",
       "secondary role": "Support",
       "image": "FiddleSticks.png"
@@ -691,7 +691,7 @@
       "image": "Xerath.png"
     },
     {
-      "name": "XinZhao",
+      "name": "Xin Zhao",
       "primary role": "Fighter",
       "secondary role": "Assassin",
       "image": "XinZhao.png"
