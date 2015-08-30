@@ -76,59 +76,84 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
    $scope.onOut = function(listInt,e) {
      var index = $scope.list2[listInt].indexOf(e);
      if(index > -1){
-       console.log(e);
+       // console.log(e);
         $scope.list2[listInt].splice(index, 1);
      }
   };
 }])
 
 app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
+  $scope.name = $scope.champion + " Page";
      $scope.done = function(){
-        $scope.listDone = {
-        "title": "Page Title",
-        "type": "custom",
-        "map": "any",
-        "mode": "any",
-        "priority": false,
-        "sortrank": 0,
-        "blocks": [
-        ]
-     }
-     var count = 1;
-     $scope.addblock = function(){
-       //add block here
-       
-       count ++;
-     }
-     var buildTemplate =  {
-              "type": "name",
-              "recMath": false,
-              "minSummonerLevel": -1,
-              "maxSummonerLevel": -1,
-              "showIfSummonerSpell": "",
-              "hideIfSummonerSpell": "",
-              "items": [
-              ]
-      };  
-     $scope.pushItems = function(listInt){
-        for(var i in $scope.list2[listInt]){
-            var item = {};
-            item["id"] =  $scope.list2[listInt][i];
-            item["count"] = 1;
-            $scope.listDone["blocks"][listInt]["items"].push(item);
-        }
+      $scope.listDone = {
+          "title": $scope.champion + " Page",
+          "type": "custom",
+          "map": "any",
+          "mode": "any",
+          "priority": false,
+          "sortrank": 0,
+          "blocks": [
+          ]
       }
-     $scope.listDone["title"] = "Change name here";
-     for(var i =0;i<count;i++){
-       $scope.listDone['blocks'].push(buildTemplate);
-        $scope.pushItems(count);
-     }
-
-      var json = JSON.stringify($scope.listDone);
-      var blob = new Blob([json], {type: "application/json"});
-      var name = $scope.champion + "builds.json";
-      saveAs(blob, name);
-     }
+      var count = 5;
+      $scope.addblock = function(){
+        //add block here
+        
+        count ++;
+      }
+        
+        //change name
+        if($scope.name!=""){
+          $scope.listDone["title"] = $scope.name;
+        }
+        
+        for(var i = 0; i<count ;i++){
+             if($scope.list2[i][0]!=undefined){
+                var buildTemplate =  {
+                  "type": "name",
+                  "recMath": false,
+                  "minSummonerLevel": -1,
+                  "maxSummonerLevel": -1,
+                  "showIfSummonerSpell": "",
+                  "hideIfSummonerSpell": "",
+                  "items": [
+                  ]
+                };
+                // for(var m in $scope.list2[i]){
+                //   var item = {};
+                //   item['id']=$scope.list2[i][m];
+                //   item['count']=1;
+                //   buildTemplate['items'][m] = item;
+                // }
+                 for(var m in $scope.list2[i]){
+                   $scope.duplicate = 'false';
+                   for(var n in buildTemplate['items']){
+                     $scope.duplicate = 'false';
+                      console.log("n"+buildTemplate['items'][n]['id']);
+                       console.log("m"+$scope.list2[i][m]);
+                     if(buildTemplate['items'][n]['id']==$scope.list2[i][m]){
+                       console.log("duplicate yes");
+                       $scope.duplicate = 'true';
+                       buildTemplate['items'][n]['count']++;
+                     }
+                   }
+                   if($scope.duplicate == 'false'){
+                     console.log("no duplicate");
+                      var item = {};
+                      item['id']=$scope.list2[i][m];
+                      item['count']=1;
+                      buildTemplate['items'].push(item);
+                   }
+                }
+                
+              $scope.listDone['blocks'].push(buildTemplate); 
+           }   
+        }
+        var json = JSON.stringify($scope.listDone);
+        var blob = new Blob([json], {type: "application/json"});
+        var name = $scope.champion + "builds.json";
+        saveAs(blob, name);
+      }
    
   }])
   
