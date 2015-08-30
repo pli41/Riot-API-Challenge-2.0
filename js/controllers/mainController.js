@@ -119,22 +119,14 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($sc
                   "items": [
                   ]
                 };
-                // for(var m in $scope.list2[i]){
-                //   var item = {};
-                //   item['id']=$scope.list2[i][m];
-                //   item['count']=1;
-                //   buildTemplate['items'][m] = item;
-                // }
+                
                  for(var m in $scope.list2[i]){
                    $scope.duplicate = 'false';
-                   for(var n in buildTemplate['items']){
-                     $scope.duplicate = 'false';
-                      console.log("n"+buildTemplate['items'][n]['id']);
-                       console.log("m"+$scope.list2[i][m]);
+                   for( n in buildTemplate['items']){
                      if(buildTemplate['items'][n]['id']==$scope.list2[i][m]){
-                       console.log("duplicate yes");
-                       $scope.duplicate = 'true';
                        buildTemplate['items'][n]['count']++;
+                       $scope.duplicate = 'true';
+                       break;
                      }
                    }
                    if($scope.duplicate == 'false'){
