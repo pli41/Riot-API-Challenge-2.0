@@ -70,12 +70,9 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
               $scope.list2[$scope.list2.length]=[];
               console.log($scope.list2);
             }
-            
           };
-          
-          
-          $scope.list1 = [
-          ];
+                  
+          $scope.list1 = [];
           for(var build in buildsdata){
             $scope.list1.push(build);
           }

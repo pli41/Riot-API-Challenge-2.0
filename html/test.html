@@ -162,8 +162,12 @@
   }
   
   .itemBlock{
-    border: 1px dashed red;
     min-height: 50px;
+  }
+  
+  .itemBlock>ol{
+    border: 1px dashed red;
+    padding-top: 40px;
   }
 </style>
 
@@ -215,7 +219,7 @@
         </accordion-heading>
         <div id="allItems">
           <div ng-controller="ButtonsCtrl">
-            <input type="search" placeholder="Search"></input>
+            <input type="search" placeholder="Search" ng-model="searchText"></input>
             <div id="allItems_Left">
               <div id="allItems_Left_Left">
                 <div class='LG_categories'>Tools</div>
@@ -282,11 +286,12 @@
     <h1 class="ui-widget-header">Item Sets</h1>
     <div class="ui-widget-content">
       <div class="itemBlock" ng-repeat="block in list2">
+        <input type="text" placeholder="Block name"></input>
         <ol data-drop="true" ng-model='block' jqyoui-droppable="{multiple:true}">
-            <li ng-repeat="item in block" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="block" jqyoui-draggable="{index: {{$index}},animate:true}">
-              <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
-              {{list2}}
-            </li>
+          <li ng-repeat="item in block" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item" jqyoui-draggable="{index: {{$index}},animate:true}">
+            <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
+            {{list2}}
+          </li>
         </ol>
       </div>      
     </div>
