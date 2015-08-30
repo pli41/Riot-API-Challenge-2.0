@@ -25,7 +25,7 @@ This webapp is for Riot Api Challenge 2.0. Created by [xPLzzZx](http://na.op.gg/
 	
 3. **How did you make it?**
 
-	We analyzed the builds for each champion from over 20k normal games from NA 5.14 patch, and put the most common items into our `Most Commonly Used Items` section.
+	We analyzed the builds for each champion from over 20k normal games from NA 5.14 patch, and put the most common items into our `Most Commonly Used Items` section. Also, we analyzed platinum+ players build to create our `Pro Builds` section.
 
 ##Technology Used
 
