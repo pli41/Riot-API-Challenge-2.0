@@ -126,7 +126,7 @@ app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest',  function ($s
     for(var i = 0; i<$scope.list2.length ;i++){
       if($scope.list2[i][0]!=undefined){
         var buildTemplate =  {
-          "type": "name",
+          "type": "block name",
           "recMath": false,
           "minSummonerLevel": -1,
           "maxSummonerLevel": -1,
@@ -240,8 +240,11 @@ app.controller('SearchCtrl', ['$scope', 'itemWithName', function($scope, itemWit
     $scope.items1 = data;
     
     $scope.$watch('searchText.name', function(){
-      if($scope.searchText.name.length == 0){
+      if( $scope.searchText.name == undefined){
         angular.element('#searchResult').css('display', 'none'); 
+      }
+      else if($scope.searchText.name.length == 0){
+        angular.element('#searchResult').css('display', 'none');
       }
       else{
         angular.element('#searchResult').css('display', 'block');
@@ -265,10 +268,9 @@ app.controller('ModalCtrl', function ($scope, $modal, $log) {
   $scope.animationsEnabled = true;
   $scope.open = function () {
     var modalInstance = $modal.open({
-      animation: 'true',
+      animation: 'false',
       templateUrl: 'myModalContent.html',
       controller: 'ModalInstanceCtrl',
-      size: 'lg',
       resolve: {
         items: function () {
         }
@@ -278,6 +280,6 @@ app.controller('ModalCtrl', function ($scope, $modal, $log) {
 });
 app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
   $scope.ok = function () {
-    $modalInstance.close();
+    $modalInstance.dismiss('cancel');
   };
 });

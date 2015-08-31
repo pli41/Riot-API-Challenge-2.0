@@ -252,6 +252,7 @@
 </style>
 
 <div id="itemBuilder" ng-controller="oneCtrl">
+  <div ng-hide="champion">Please go back to Home page and select a champion</div>
   <div class="accordion" ng-controller="AccordionDemoCtrl">
     <accordion close-others="oneAtATime">
       <accordion-group is-open="status.isFirstOpen">
@@ -271,9 +272,10 @@
         </div>
       </accordion-group>
       
-      <accordion-group is-open="status.isSecondOpen" popover = "Common choices" popover-placement="bottom" popover-trigger="mouseenter">
+      <accordion-group is-open="status.isSecondOpen">
         <accordion-heading>
-          Most commonly used items        
+          Most commonly used items
+          <span class="glyphicon glyphicon-info-sign" aria-hidden="true"  popover-title= "Common choices!" popover = "We analyzed 20k+ player's builds for this champion from NA patch 5.14" popover-placement="bottom" popover-trigger="mouseenter"></span>        
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isSecondOpen, 'glyphicon-chevron-right': !status.isSecondOpen}"></i>
         </accordion-heading>
         <div id="products" ng-controller="ButtonsCtrl">
@@ -288,9 +290,10 @@
         </div> 
       </accordion-group>
       
-      <accordion-group is-open="status.isThirdOpen" popover = "Platinum+ Players' choices!" popover-placement="bottom" popover-trigger="mouseenter">
+      <accordion-group is-open="status.isThirdOpen" >
         <accordion-heading>
-          Pro Builds        
+          Pro Builds 
+          <span class="glyphicon glyphicon-info-sign" aria-hidden="true" popover-title= "Platinum+ Players' choices!" popover = "We analyzed platinum+ player's builds for this champion from NA patch 5.14" popover-placement="bottom" popover-trigger="mouseenter"></span>      
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isThirdOpen, 'glyphicon-chevron-right': !status.isThirdOpen}"></i>
         </accordion-heading>
         <div id="products" ng-controller="ButtonsCtrl">
@@ -306,8 +309,6 @@
           </div>
         </div> 
       </accordion-group>
-      
-      
       
       <accordion-group is-open="status.isFourthOpen">
         <accordion-heading>
@@ -413,7 +414,7 @@
         </button>
     </div>
     
-    <div>
+ 
       <div ng-controller="ModalCtrl">
           <script type="text/ng-template" id="myModalContent.html">
               <div class="modal-header">
@@ -443,7 +444,7 @@
           </script>
       <div class="buttons">
         <button type="button" class="btn btn-default" ng-click="open()" popover = "Read it before downloading your final item set JSON" popover-placement="bottom" popover-trigger="mouseenter">
-          Read before done
+          Read before finish
         </button>
         <button type="button" class="btn btn-default" ng-click="done()"popover = "Download your item set" popover-placement="bottom" popover-trigger="mouseenter">
           Generate JSON
@@ -451,7 +452,7 @@
       </div>  
       
     </div>
-    </div>
+
     
     
   </div>
