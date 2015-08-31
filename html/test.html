@@ -192,7 +192,7 @@
   .modal.fade.in {
     top: 50%;
     left: 50%;
-    height: 71%;
+    height: 76.1%;
   }
   
   .modal-header h3 {
@@ -262,9 +262,9 @@
             <div ng-controller="SearchCtrl">
               <input type="search" placeholder="Search" ng-model="searchText.name"></input>
               <div id="searchResult">
-                <div class="col-lg-3" ng-repeat = 'item in items| filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                <div class="col-lg-3" ng-repeat = 'item in items1 tracked by $index | filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item.key" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
                     popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
-                      
+                      <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.key}}.png" class="img-responsive">
                 </div>
               </div>
             </div>
@@ -371,7 +371,7 @@
         </div>
         
         <div class="modal-footer">
-            <div ng-controller = "jsonCtrl">
+            <div>
               <input type="text" name="input" ng-model="name">
               <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
               <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>

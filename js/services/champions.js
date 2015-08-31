@@ -37,3 +37,13 @@ app.factory('itemOriginal', ['$http', function($http) {
             }); 
 }]);
 
+app.factory('itemWithName', ['$http', function($http) { 
+  return $http.get('itemWithName.json') 
+            .success(function(data) { 
+              return data;
+            }) 
+            .error(function(err) { 
+              return err; 
+            }); 
+}]);
+

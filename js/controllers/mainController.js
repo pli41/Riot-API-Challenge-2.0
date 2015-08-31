@@ -95,7 +95,7 @@ app.controller('jsonCtrl',['$scope', '$modalInstance', 'championbuilds','shareTe
   $scope.ok = function(){
     console.log("clicked done");
   
-   /* $scope.listDone = {
+   $scope.listDone = {
         "title": $scope.name,
         "type": "custom",
         "map": "any",
@@ -149,12 +149,12 @@ app.controller('jsonCtrl',['$scope', '$modalInstance', 'championbuilds','shareTe
     }
     var json = JSON.stringify($scope.listDone);
     var blob = new Blob([json], {type: "application/json"});
-    var name = $scope.champion + "builds.json";*/
-    //saveAs(blob, name); 
-   // $modalInstance.close();
+    var name = $scope.champion + "builds.json";
+    saveAs(blob, name); 
+    $modalInstance.close();
   };
   $scope.cancel = function () {
-    //$modalInstance.dismiss('cancel');
+    $modalInstance.dismiss('cancel');
   };
   
 }])
@@ -221,19 +221,15 @@ app.controller('ButtonsCtrl', ['$scope', 'items','itemOriginal',function ($scope
      //tabs
        $scope.startingTabs = [{'title':'Jungle','content': data['Jungle']},{'title':'Lane','content':data['Lane']}];
    }) 
-}])
+}]);
 
-app.controller('SearchCtrl', ['$scope', 'itemOriginal', function($scope, itemOriginal){
-  itemOriginal.success(function(data) {
-    console.log(data.data['1001']);
+app.controller('SearchCtrl', ['$scope', 'itemWithName', function($scope, itemWithName){
+  itemWithName.success(function(data) {
+    console.log(data);
     $scope.searchText = '';
     $scope.searchText.name = '';
-    var array = [];
-    for(var key in data.data) {
-      array.push(data.data[key]);
-    }
-    $scope.items = array;
     
+    $scope.items1 = data;
     
     $scope.$watch('searchText.name', function(){
       if($scope.searchText == ''){
