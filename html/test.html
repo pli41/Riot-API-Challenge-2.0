@@ -267,7 +267,7 @@
         </div>
       </accordion-group>
       
-      <accordion-group is-open="status.isSecondOpen">
+      <accordion-group is-open="status.isSecondOpen" popover = "Common choices" popover-placement="bottom" popover-trigger="mouseenter">
         <accordion-heading>
           Most commonly used items        
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isSecondOpen, 'glyphicon-chevron-right': !status.isSecondOpen}"></i>
@@ -288,7 +288,7 @@
         </div> 
       </accordion-group>
       
-      <accordion-group is-open="status.isThirdOpen">
+      <accordion-group is-open="status.isThirdOpen" popover = "Platinum+ Players' choices!" popover-placement="bottom" popover-trigger="mouseenter">
         <accordion-heading>
           Pro Builds        
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isThirdOpen, 'glyphicon-chevron-right': !status.isThirdOpen}"></i>
@@ -392,7 +392,7 @@
   </div>
   
   <div id="itemSet" ng-controller="jsonCtrl">
-    <div id="itemSet_Title">
+    <div id="itemSet_Title" popover = "Drag items into your item set. Double click to delete item" popover-placement="bottom" popover-trigger="mouseenter">
       <span>Item Set</span>
       <input type="text" name="input" ng-model="name" placeholder="Item set name">
     </div>
@@ -410,7 +410,9 @@
     </div>
     
     <div id="itemSet_button">
-        <button ng-click="addBlock()">Add Block</button>
+        <button ng-click="addBlock()"popover = "Add a new block to your item set" popover-placement="bottom" popover-trigger="mouseenter">
+            Add Block
+        </button>
     </div>
     
     <div>
@@ -428,11 +430,12 @@
                     {championKey}ASC.json
                     {championKey}PG.json
                   </pre>
-                  After downloading, you need to put the file into League of Legends config directory:
+                  After downloading, you need to put the file into League of Legends config directory for your item set to work:
                   
                   <pre>
                     Directory: League of Legends\Config\Champions\{championKey}\Recommended\
                     Example: League of Legends\Config\Champions\MonkeyKing\Recommended\
+                    Mac: right click "show package content"
                   </pre>
               </div>
               
@@ -441,8 +444,12 @@
               </div>
           </script>
       <div class="buttons">
-        <button type="button" class="btn btn-default" ng-click="open()">Read before Use</button>
-        <button type="button" class="btn btn-default" ng-click="done()">Generate Json</button>
+        <button type="button" class="btn btn-default" ng-click="open()" popover = "Read it before downloading your final item set JSON" popover-placement="bottom" popover-trigger="mouseenter">
+          Read before done
+        </button>
+        <button type="button" class="btn btn-default" ng-click="done()"popover = "Download your item set" popover-placement="bottom" popover-trigger="mouseenter">
+          Generate JSON
+        </button>
       </div>  
       
     </div>

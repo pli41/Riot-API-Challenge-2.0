@@ -24,7 +24,7 @@ This webapp is for Riot Api Challenge 2.0. Created by [xPLzzZx](http://na.op.gg/
 	* UI is complicated, and the users cannot find what they want
 	* Users do not know what to drag
 	
-	With our new UI and `Most Commonly Used Items` and `Pro Builds` sections, we think our webApp solved these problems (a little).
+	With our new UI and `Most Commonly Used Items` and `Pro Builds` sections, we think our webApp can solve these problems (a little).
 3. **How did you make it?**
 
 	We analyzed the builds for each champion from over 20k normal games from NA 5.14 patch, and put the most common items into our `Most Commonly Used Items` section. Also, we analyzed platinum+ players build to create our `Pro Builds` section. 
