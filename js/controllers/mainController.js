@@ -65,6 +65,7 @@ app.controller('oneCtrl',['$scope', 'championbuilds','championbuildspro','shareT
           
           var maxBlockNum = 5;
           $scope.list2 = [];
+          $scope.list2[0]=[];
           $scope.blockNames=[];
           
           $scope.addBlock = function(){

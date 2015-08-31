@@ -391,8 +391,11 @@
   </div>
   
   <div id="itemSet" ng-controller="jsonCtrl">
-    <div id="itemSet_Title" popover = "Drag items into your item set. Double click to delete item" popover-placement="bottom" popover-trigger="mouseenter">
+    
+    <div id="itemSet_Title">
       <span>Item Set</span>
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true" popover-title = "Use" popover = "Drag items into your item set. Double click to delete item. Do NOT drag item between blocks" popover-placement="bottom" popover-trigger="mouseenter"></span>        
+        
       <input type="text" name="input" ng-model="name" placeholder="Item set name">
     </div>
     
