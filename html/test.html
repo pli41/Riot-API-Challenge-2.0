@@ -213,7 +213,7 @@
   .modal.fade.in {
     top: 50%;
     left: 50%;
-    height: 81.2%;
+    height: 78.3%;
   }
   
   .modal-header h3 {
@@ -249,10 +249,24 @@
   .buttons{
     float:right;
   }
+  
+  #warningSign{
+    left: 15%;
+    top: 1%;
+    font-size: 30px;
+    align-content: center;
+    position: absolute;
+    color: orange;
+  }
+  
+  .glyphicon-info-sign{
+    color: orange;
+    
+  }
 </style>
 
 <div id="itemBuilder" ng-controller="oneCtrl">
-  <div ng-hide="champion">Please go back to Home page and select a champion</div>
+  <div id="warningSign" ng-hide="champion">Please go back to Home page and select a champion</div>
   <div class="accordion" ng-controller="AccordionDemoCtrl">
     <accordion close-others="oneAtATime">
       <accordion-group is-open="status.isFirstOpen">
@@ -293,7 +307,7 @@
       <accordion-group is-open="status.isThirdOpen" >
         <accordion-heading>
           Pro Builds 
-          <span class="glyphicon glyphicon-info-sign" aria-hidden="true" popover-title= "Platinum+ Players' choices!" popover = "We analyzed platinum+ player's builds for this champion from NA patch 5.14" popover-placement="bottom" popover-trigger="mouseenter"></span>      
+          <span class="glyphicon glyphicon-info-sign" aria-hidden="true" popover-title= "Platinum+ Players' choices!" popover = "We analyzed platinum+ player's builds from 20k+ games for this champion from NA patch 5.14" popover-placement="bottom" popover-trigger="mouseenter"></span>      
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isThirdOpen, 'glyphicon-chevron-right': !status.isThirdOpen}"></i>
         </accordion-heading>
         <div id="products" ng-controller="ButtonsCtrl">
@@ -425,7 +439,7 @@
               </div>
               <div class="modal-body">
                   You can change the json name to whatever you want, but these names are reserved by LoL. Files with these name will NOT work.
-                  <pre>
+                  <pre style="margin:0">
                     {championKey}SR.json
                     {championKey}TT.json
                     {championKey}DM.json
@@ -434,10 +448,12 @@
                   </pre>
                   After downloading, you need to put the file into League of Legends config directory for your item set to work:
                   
-                  <pre>
-                    Directory: League of Legends\Config\Champions\{championKey}\Recommended\
-                    Example: League of Legends\Config\Champions\MonkeyKing\Recommended\
-                    Mac: right click "show package content"
+                  <pre style="float:left; margin:0">
+Directory: League of Legends\Config\Champions\{championKey}\Recommended\
+
+Example: League of Legends\Config\Champions\MonkeyKing\Recommended\
+
+Mac: In "Applications" folder, right click "LOL" and select "show package content";then follow the same procedure.
                   </pre>
               </div>
               
