@@ -247,6 +247,7 @@ app.controller('SearchCtrl', ['$scope', 'itemWithName', function($scope, itemWit
         angular.element('#searchResult').css('display', 'none');
       }
       else{
+        console.log('show');
         angular.element('#searchResult').css('display', 'block');
       };
     });

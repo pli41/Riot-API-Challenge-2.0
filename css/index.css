@@ -76,7 +76,9 @@ a{
 	
 }
 
-
+#big-video-wrap{
+	z-index: -1;
+}
 
 a:hover{
 	color: orange;
