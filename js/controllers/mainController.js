@@ -228,7 +228,7 @@ app.controller('ButtonsCtrl', ['$scope', 'items','itemOriginal',function ($scope
         }
      })
      //tabs
-       $scope.startingTabs = [{'title':'Jungle','content': data['Jungle']},{'title':'Lane','content':data['Lane']}];
+       $scope.startingTabs = [{'title':'Lane','content':data['Lane']},{'title':'Jungle','content': data['Jungle']}];
    }) 
 }]);
 
@@ -238,11 +238,10 @@ app.controller('SearchCtrl', ['$scope', 'itemWithName', function($scope, itemWit
 
     $scope.searchText = '';
     $scope.searchText.name = '';
-    
     $scope.items1 = data;
     
     $scope.$watch('searchText.name', function(){
-      if($scope.searchText == ''){
+      if($scope.searchText.name.length == 0){
         angular.element('#searchResult').css('display', 'none'); 
       }
       else{

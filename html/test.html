@@ -187,6 +187,7 @@
     width: 427px;
     border: 1px solid blue;
     display: none;
+    overflow: scroll;
   }
   
   .modal.fade.in {
@@ -283,7 +284,7 @@
             <div ng-controller="SearchCtrl">
               <input type="search" placeholder="Search" ng-model="searchText.name"></input>
               <div id="searchResult">
-                <div class="col-lg-3" ng-repeat = 'item in items1 | filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item.key" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                <div class="col-lg-2" ng-repeat = 'item in items1 | filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item.key" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
                     popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                       <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.key}}.png" class="img-responsive">
                 </div>
