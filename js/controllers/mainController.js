@@ -54,7 +54,7 @@ app.factory('shareTest', function(){
   return {};
 });
 
-app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
+app.controller('oneCtrl',['$scope', 'championbuilds', 'shareTest', function ($scope,championbuilds, shareTest){
   $scope.champion = shareTest.message;
   championbuilds.success(function(data) {
      for(var i in data){
@@ -89,78 +89,85 @@ app.controller('oneCtrl',['$scope', 'championbuilds','shareTest', function ($sco
    };
 }])
 
-app.controller('jsonCtrl',['$scope', 'championbuilds','shareTest', function ($scope,championbuilds, shareTest){
+app.controller('jsonCtrl',['$scope', '$modalInstance', 'championbuilds','shareTest',  function ($scope,$modalInstance, championbuilds, shareTest){
   $scope.name = $scope.champion + " Page";
-     $scope.done = function(){
-       console.log("clicked done");
-      $scope.listDone = {
-          "title": $scope.champion + " Page",
-          "type": "custom",
-          "map": "any",
-          "mode": "any",
-          "priority": false,
-          "sortrank": 0,
-          "blocks": [
-          ]
-      }
-        //change name
-        if($scope.name!=""){
-          $scope.listDone["title"] = $scope.name;
-        }
-        
-        for(var i = 0; i<$scope.list2.length ;i++){
-             if($scope.list2[i][0]!=undefined){
-                var buildTemplate =  {
-                  "type": "name",
-                  "recMath": false,
-                  "minSummonerLevel": -1,
-                  "maxSummonerLevel": -1,
-                  "showIfSummonerSpell": "",
-                  "hideIfSummonerSpell": "",
-                  "items": [
-                  ]
-                };
-                if($scope.blockNames[i]!=""){
-                   buildTemplate["type"] = $scope.blockNames[i];
-                 }
-                 for(var m in $scope.list2[i]){
-                   $scope.duplicate = 'false';
-                   for( n in buildTemplate['items']){
-                     if(buildTemplate['items'][n]['id']==$scope.list2[i][m]){
-                       buildTemplate['items'][n]['count']++;
-                       $scope.duplicate = 'true';
-                       break;
-                     }
-                   }
-                   if($scope.duplicate == 'false'){
-                     console.log("no duplicate");
-                      var item = {};
-                      item['id']=$scope.list2[i][m];
-                      item['count']=1;
-                      buildTemplate['items'].push(item);
-                   }
-                }
-              console.log($scope.list2[i]);
-              console.log("buildTemplate"+buildTemplate);
-              $scope.listDone['blocks'].push(buildTemplate); 
-           }   
-        }
-        var json = JSON.stringify($scope.listDone);
-        var blob = new Blob([json], {type: "application/json"});
-        var name = $scope.champion + "builds.json";
-        saveAs(blob, name);
-      }
-   
-  }])
+  console.log($modalInstance);
+  $scope.ok = function(){
+    console.log("clicked done");
   
-app.controller('ButtonsCtrl', ['$scope', 'items','itemOriginal',function ($scope,items,itemOriginal, $window) {
+   /* $scope.listDone = {
+        "title": $scope.name,
+        "type": "custom",
+        "map": "any",
+        "mode": "any",
+        "priority": false,
+        "sortrank": 0,
+        "blocks": []
+    }
+  
+    //change name
+    if($scope.name!=""){
+      $scope.listDone["title"] = $scope.name;
+    }
+          
+    for(var i = 0; i<$scope.list2.length ;i++){
+      if($scope.list2[i][0]!=undefined){
+        var buildTemplate =  {
+          "type": "name",
+          "recMath": false,
+          "minSummonerLevel": -1,
+          "maxSummonerLevel": -1,
+          "showIfSummonerSpell": "",
+          "hideIfSummonerSpell": "",
+          "items": [
+          ]
+        };
+        if($scope.blockNames[i]!=""){
+            buildTemplate["type"] = $scope.blockNames[i];
+        }
+        for(var m in $scope.list2[i]){
+          $scope.duplicate = 'false';
+          for(var n in buildTemplate['items']){
+            if(buildTemplate['items'][n]['id']==$scope.list2[i][m]){
+              buildTemplate['items'][n]['count']++;
+              $scope.duplicate = 'true';
+              break;
+            }
+          }
+          if($scope.duplicate == 'false'){
+            console.log("no duplicate");
+            var item = {};
+            item['id']=$scope.list2[i][m];
+            item['count']=1;
+            buildTemplate['items'].push(item);
+          }
+        }
+        console.log($scope.list2[i]);
+        console.log("buildTemplate"+buildTemplate);
+        $scope.listDone['blocks'].push(buildTemplate); 
+      }   
+    }
+    var json = JSON.stringify($scope.listDone);
+    var blob = new Blob([json], {type: "application/json"});
+    var name = $scope.champion + "builds.json";*/
+    //saveAs(blob, name); 
+   // $modalInstance.close();
+  };
+  $scope.cancel = function () {
+    //$modalInstance.dismiss('cancel');
+  };
+  
+}])
+  
+app.controller('ButtonsCtrl', ['$scope', 'items','itemOriginal',function ($scope, items, itemOriginal, $window) {
+    
     itemOriginal.success(function(data){
         $scope.itemOriginalData = data['data'];
         // console.log(data['data']);
     });
         
    items.success(function(data) {
-   
+        $scope.items = data;
         $scope.checkModel = {
         Consumable: false,
         GoldIncome: false,
@@ -210,12 +217,34 @@ app.controller('ButtonsCtrl', ['$scope', 'items','itemOriginal',function ($scope
          
         }
         // console.log("showResults:"+$scope.showResults);
-     });
+     })
      //tabs
        $scope.startingTabs = [{'title':'Jungle','content': data['Jungle']},{'title':'Lane','content':data['Lane']}];
-   }); 
-}]);
+   }) 
+}])
 
+app.controller('SearchCtrl', ['$scope', 'itemOriginal', function($scope, itemOriginal){
+  itemOriginal.success(function(data) {
+    console.log(data.data['1001']);
+    $scope.searchText = '';
+    $scope.searchText.name = '';
+    var array = [];
+    for(var key in data.data) {
+      array.push(data.data[key]);
+    }
+    $scope.items = array;
+    
+    
+    $scope.$watch('searchText.name', function(){
+      if($scope.searchText == ''){
+        angular.element('#searchResult').css('display', 'none'); 
+      }
+      else{
+        angular.element('#searchResult').css('display', 'block');
+      };
+    });
+  })
+}]);
   
 app.controller('AccordionDemoCtrl', function ($scope) {
   $scope.oneAtATime = true;
@@ -227,47 +256,18 @@ app.controller('AccordionDemoCtrl', function ($scope) {
   };
 });
 
-app.controller('blockMgnCtrl', function ($scope){
-  var maxGroupNo = 5;
-  $scope.groups = [
-  {
-    title: 'Dynamic Group Header - 1',
-    content: 
-    [
-      {
-        title: 'item 1-1',
-      },
-      {
-        title: 'item 2-1'
-      }
-    ]
-  }, 
-  {
-    title: 'Dynamic Group Header - 2',
-    content: 
-    [
-      {
-        title: 'item 2-1',
-      },
-      {
-        title: 'item 2-2'
-      }
-    ]
-  }];
-
-  $scope.addGroup = function() {
-    var newGroupNo = $scope.groups.length + 1;
-    if(newGroupNo < maxGroupNo+1){
-      $scope.groups.push(
-        {
-          title: 'No.' + newGroupNo,
-          content:
-          [
-            {title: newGroupNo+'-1 item'},
-            {title: newGroupNo+'-2 item'}
-          ]  
+app.controller('ModalCtrl', function ($scope, $modal, $log) {
+  $scope.animationsEnabled = true;
+  $scope.open = function () {
+    var modalInstance = $modal.open({
+      animation: 'true',
+      templateUrl: 'myModalContent.html',
+      controller: 'jsonCtrl',
+      size: 'lg',
+      resolve: {
+        items: function () {
         }
-      );
-    }
+      }
+    });
   };
 });
