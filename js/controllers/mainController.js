@@ -234,7 +234,6 @@ app.controller('ButtonsCtrl', ['$scope', 'items','itemOriginal',function ($scope
 
 app.controller('SearchCtrl', ['$scope', 'itemWithName', function($scope, itemWithName){
   itemWithName.success(function(data) {
-    console.log("search"+data);
 
     $scope.searchText = '';
     $scope.searchText.name = '';
