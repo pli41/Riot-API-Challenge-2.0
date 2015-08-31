@@ -37,8 +37,21 @@ app.factory('itemOriginal', ['$http', function($http) {
             }); 
 }]);
 
+
 app.factory('championbuildspro', ['$http', function($http) { 
   return $http.get('champion_builds_pro.json') 
+
+            .success(function(data) { 
+              return data;
+            }) 
+            .error(function(err) { 
+              return err; 
+            }); 
+}]);
+
+app.factory('itemWithName', ['$http', function($http) { 
+  return $http.get('itemWithName.json') 
+
             .success(function(data) { 
               return data;
             }) 

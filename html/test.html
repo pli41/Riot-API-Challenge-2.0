@@ -192,7 +192,7 @@
   .modal.fade.in {
     top: 50%;
     left: 50%;
-    height: 71%;
+    height: 76.1%;
   }
   
   .modal-header h3 {
@@ -283,9 +283,9 @@
             <div ng-controller="SearchCtrl">
               <input type="search" placeholder="Search" ng-model="searchText.name"></input>
               <div id="searchResult">
-                <div class="col-lg-3" ng-repeat = 'item in items| filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                <div class="col-lg-3" ng-repeat = 'item in items1 | filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item.key" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
                     popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
-                      
+                      <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.key}}.png" class="img-responsive">
                 </div>
               </div>
             </div>
@@ -371,31 +371,31 @@
     
     <div ng-controller="jsonCtrl">
       <div ng-controller="ModalCtrl">
-    <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <h3 class="modal-title">Usage</h3>
-        </div>
-        <div class="modal-body">
-            You can change the json name to whatever you want, but these names are reserved by LoL. Files with these name will NOT work.
-            <pre>
-              {championKey}SR.json
-              {championKey}TT.json
-              {championKey}DM.json
-              {championKey}ASC.json
-              {championKey}PG.json
-            </pre>
-            After downloading, you need to put the file into League of Legends config directory:
-            
-            <pre>
-              Directory: League of Legends\Config\Champions\{championKey}\Recommended\
-              Example: League of Legends\Config\Champions\MonkeyKing\Recommended\
-            </pre>
-        </div>
-        
-        <div class="modal-footer">
-              <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-        </div>
-      </script>
+          <script type="text/ng-template" id="myModalContent.html">
+              <div class="modal-header">
+                  <h3 class="modal-title">Usage</h3>
+              </div>
+              <div class="modal-body">
+                  You can change the json name to whatever you want, but these names are reserved by LoL. Files with these name will NOT work.
+                  <pre>
+                    {championKey}SR.json
+                    {championKey}TT.json
+                    {championKey}DM.json
+                    {championKey}ASC.json
+                    {championKey}PG.json
+                  </pre>
+                  After downloading, you need to put the file into League of Legends config directory:
+                  
+                  <pre>
+                    Directory: League of Legends\Config\Champions\{championKey}\Recommended\
+                    Example: League of Legends\Config\Champions\MonkeyKing\Recommended\
+                  </pre>
+              </div>
+              
+              <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+              </div>
+            </script>
       <input type="text" name="input" ng-model="name">
       
       <button type="button" class="btn btn-default" ng-click="open()">Read before Use</button>
