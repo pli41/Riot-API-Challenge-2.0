@@ -5,6 +5,8 @@
 
 .thumbnail{
 	margin-bottom: 5px;
+	background-color: transparent;
+	border: 1px solid #76c8d0;
 }
 
 .col-lg-1{
@@ -47,9 +49,8 @@
     font-size: larger;
 }
 
-.thumbnail{
-	background-color: transparent;
-	border: 1px solid #76c8d0;
+.thumbnail:hover, .thumbnail:focus{
+	border: 1px solid orange !important;
 }
 
 .champName:hover{
@@ -60,11 +61,23 @@ a{
 	color: #FFF;
 }
 
+.nav-tabs.nav-justified>li{
+	background-color: black;
+}
+
 .nav-tabs.nav-justified > li > a {
     /* border-bottom: 1px solid #ddd; */
     height:100%;
 	border-bottom: 0px;
 }
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover, .nav-tabs.nav-justified>.active>a:focus{
+	border-bottom: 0;
+	
+}
+
+
+
 a:hover{
 	color: orange;
 }
