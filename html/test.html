@@ -203,11 +203,11 @@
   
   #searchResult{
     position: absolute;
-    height: 200px;
-    width: 427px;
-    border: 1px solid blue;
+    width: 100%;
     display: none;
-    overflow: scroll;
+    opacity: 0.8;
+    background-color: black;
+    width: 34.1%
   }
   
   .modal.fade.in {
@@ -297,7 +297,7 @@
           <div id="catalog">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-sm-2" ng-repeat='item in listpro' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="listpro" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                <div class="col-lg-2" ng-repeat='item in listpro' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="listpro" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
                   popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                   <img style="min-height: 25px; min-width: 25px" src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png">
                 </div>
@@ -318,8 +318,8 @@
           <div ng-controller="ButtonsCtrl">
             <div ng-controller="SearchCtrl">
               <input type="search" placeholder="Search" ng-model="searchText.name"></input>
-              <div id="searchResult">
-                <div class="col-lg-2" ng-repeat = 'item in items1 | filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="item.key" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+              <div id="searchResult" class="container">
+                <div class="col-lg-2" ng-repeat = 'item in items1 | filter: searchText' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="items1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
                     popover-title={{itemOriginalData[item.key]['name']}} popover = {{itemOriginalData[item.key]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                       <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.key}}.png" class="img-responsive">
                 </div>
@@ -378,7 +378,7 @@
             </div>
             <div id="allItems_Right">
                 <div class="container">
-                  <div class="col-lg-3" ng-repeat = 'item in showResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                  <div class="col-lg-2" ng-repeat = 'item in showResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
                     popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                     <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
                   </div>
