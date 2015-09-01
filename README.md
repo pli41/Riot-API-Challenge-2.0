@@ -4,7 +4,7 @@ This webapp is for Riot Api Challenge 2.0. Created by [xPLzzZx](http://na.op.gg/
 ##FAQ
 1. **What is this webApp for and what does it do?**
 
-	This is for Riot API Challenge 2.0 competition. We improved the original item sets function, so that the users could find the items much more quickly. 
+	This is for Riot API Challenge 2.0 competition. We improved the original item sets system, so that the users could find the items much more quickly. 
 	
 2. **How to use the webApp?**
 	* Click the champion you want to make a item set for.
@@ -18,7 +18,7 @@ This webapp is for Riot Api Challenge 2.0. Created by [xPLzzZx](http://na.op.gg/
 	* Click on `Generate JSON` to download Item Sets Json file
 	* Enjoy your new item set:)
 	
-3. Why did you implement these features?
+3. **Why did you implement these features?**
 
 	We feel the users do not benefit much from the item sets function in the game client, and the main reasons are
 	* UI is complicated, and the users cannot find what they want
