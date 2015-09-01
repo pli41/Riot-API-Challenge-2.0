@@ -263,6 +263,10 @@
     color: orange;
     
   }
+  
+  #importantBtn{
+    background-color: orange;
+  }
 </style>
 
 <div id="itemBuilder" ng-controller="oneCtrl">
@@ -393,7 +397,7 @@
             </div>
             <div id="allItems_Right">
                 <div class="container">
-                  <div class="col-lg-2" ng-repeat = 'item in showResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
+                  <div class="col-lg-3" ng-repeat = 'item in showResults' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="showResults" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}"
                     popover-title={{itemOriginalData[item]['name']}} popover = {{itemOriginalData[item]['plaintext']}} Popover-animation="true" popover-placement="bottom" popover-trigger="mouseenter">
                     <img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item}}.png" class="img-responsive">
                   </div>
@@ -462,7 +466,7 @@ Mac: In "Applications" folder, right click "LOL" and select "show package conten
               </div>
           </script>
       <div class="buttons">
-        <button type="button" class="btn btn-default" ng-click="open()" popover = "Read it before downloading your final item set JSON" popover-placement="bottom" popover-trigger="mouseenter">
+        <button id="importantBtn" type="button" class="btn btn-default" ng-click="open()" popover = "Read it before downloading your final item set JSON" popover-placement="bottom" popover-trigger="mouseenter">
           Read before finish
         </button>
         <button type="button" class="btn btn-default" ng-click="done()"popover = "Download your item set" popover-placement="bottom" popover-trigger="mouseenter">
